@@ -72,6 +72,7 @@
                     <?php echo Application::$app->session->getFlash('success') ?>
                 </div>
                 <?php endif; ?>
+
                 {{content}}
 
             </div>

@@ -11,9 +11,6 @@ require_once 'models/RegisterModel.php';
 //$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 //$dotenv->load();
 
-use app\controllers\AuthController;
-use app\controllers\SiteController;
-
 $app = new Application(__DIR__);
 
 $app->db->applyMigrations();
