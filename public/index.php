@@ -42,4 +42,6 @@ $app->router->get('/trending', [TrendingController::class, 'trending']);
 
 $app->router->get('/pasthits', [TrendingController::class, 'pasthits']);
 
+$app->router->get('/personalized', [SiteController::class, 'personalized']);
+
 $app->run();

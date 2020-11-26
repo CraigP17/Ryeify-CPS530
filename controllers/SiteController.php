@@ -27,6 +27,16 @@ class SiteController extends Controller
         return $this->render('team');
     }
 
+    public function personalized()
+    {
+        $params = [
+            'title' => 'Home',
+            'song' => 'Song1',
+            'tracks' => ['track1' => 'track']
+        ];
+        return $this->render('personalized', $params);
+    }
+
     public function contact()
     {
         return $this->render('contact');
