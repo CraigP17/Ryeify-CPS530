@@ -7,6 +7,7 @@ require_once '../core/Model.php';
 require_once '../core/DBModel.php';
 require_once '../controllers/SiteController.php';
 require_once '../controllers/AuthController.php';
+require_once '../controllers/TrendingController.php';
 require_once '../models/RegisterModel.php';
 require_once '../models/LoginModel.php';
 
@@ -15,6 +16,7 @@ require_once '../models/LoginModel.php';
 
 use app\controllers\AuthController;
 use app\controllers\SiteController;
+use app\controllers\TrendingController;
 
 
 $app = new Application(dirname(__DIR__));
@@ -35,5 +37,9 @@ $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 
 $app->router->get('/logout', [AuthController::class, 'logout']);
+
+$app->router->get('/trending', [TrendingController::class, 'trending']);
+
+$app->router->get('/pasthits', [TrendingController::class, 'pasthits']);
 
 $app->run();

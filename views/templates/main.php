@@ -30,10 +30,10 @@
                         <a class="nav-link text-light text-center" href="/"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light text-center" href="#"> Trending Songs </a>
+                        <a class="nav-link text-light text-center" href="/trending"> Trending Songs </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light text-center" href="#"> Past Hits </a>
+                        <a class="nav-link text-light text-center" href="/pasthits"> Past Hits </a>
                     </li>
                     <li class="nav-item dropdown text-center">
                         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

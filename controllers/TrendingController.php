@@ -13,6 +13,11 @@ class TrendingController extends Controller
         $data = [
            'songs' => 'data'
         ];
-        $this->render('trending', $data);
+       return $this->render('trending', $data);
+    }
+
+    public function pasthits()
+    {
+        return $this->render('pasthits');
     }
 }
