@@ -35,8 +35,10 @@ class Application
         $this->session = new Session();
         $this->router = new Router($this->request, $this->response);
 
-        $config = parse_ini_file('../private/config.ini');
-        $this->db = new Database($config);
+        $this->config = parse_ini_file('../private/config.ini');;
+        $this->db = new Database($this->config);
+
+        $this->checkShopifyToken();
 
         // Get logged in user from session
         $primaryValue = $this->session->get('user');
@@ -74,6 +76,71 @@ class Application
     public function setController($controller)
     {
         $this->controller = $controller;
+    }
+
+    public function checkShopifyToken()
+    {
+        // Check if access tokens are set
+        if (isset($_SESSION['access_token']) && isset($_SESSION['access_token_time']))
+        {
+            $last_time = $_SESSION['access_token_time'];
+
+            // Check if token expired (60 mins)
+            if (time() - $last_time < 3600)
+            {
+                // Good to go
+                return true;
+            }
+        }
+
+        // Needs new token
+        $success = $this->getShopifyBearerToken();
+        if (!$success)
+        {
+            // Redirect to error page, with Internal Server Error 500
+            $this->response->setStatusCode(500);
+            $this->response->redirect('/error');
+            return false;
+        }
+        return true;
+    }
+
+    protected function getShopifyBearerToken()
+    {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://accounts.spotify.com/api/token",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "grant_type=client_credentials",
+            CURLOPT_HTTPHEADER => array(
+                "Authorization: Basic " . base64_encode($this->config['client_id'] . ":" .  $this->config['client_secret']),
+                "Content-Type: application/x-www-form-urlencoded"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        // Save token to session to be available on all pages
+        $arr_response = json_decode($response, true);
+
+        if (isset($arr_response['access_token']))
+        {
+            // Save access token to session
+            $_SESSION['access_token'] = $arr_response['access_token'];
+            $_SESSION['access_token_time'] = time();
+            return true;
+        }
+
+        // Return error for redirection
+        return false;
     }
 
     public function login($user)
