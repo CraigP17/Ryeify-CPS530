@@ -12,15 +12,17 @@ class AuthController extends Controller
     public function login($request, $response)
     {
         $loginForm = new LoginModel();
-        if ($request->isPost())
+        if ($_POST)
         {
             $loginForm->loadData($request->getBody());
             if ($loginForm->validate() && $loginForm->login())
             {
                 $response->redirect('/');
-                return;
+                return 0;
             }
         }
+        // GET request
+        // return login view
         $this->setLayout('auth');
         return $this->render('login', [
             'model' => $loginForm
@@ -37,7 +39,7 @@ class AuthController extends Controller
     {
         $registerModel = new RegisterModel();
 
-        if ($request->isPost())
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $registerModel->loadData($request->getBody());
 
@@ -45,13 +47,15 @@ class AuthController extends Controller
             {
                 \Application::$app->session->setFlash('success', 'Thanks for registering!');
                 \Application::$app->response->redirect('/');
-                exit;
+                return 0;
             }
 
             return $this->render('register', [
                 'model' => $registerModel
             ]);
         }
+        // GET request
+        // return register view
         $this->setLayout('auth');
         return $this->render('register', [
             'model' => $registerModel
