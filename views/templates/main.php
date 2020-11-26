@@ -40,7 +40,7 @@
                             Personalized Spotify
                         </a>
                         <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown" id="dropdown-color">
-                            <a class="dropdown-item text-light dropdown-hover" href="#"> Spotify 1 </a>
+                            <a class="dropdown-item text-light dropdown-hover" href="/personalized"> Personalized </a>
                             <a class="dropdown-item text-light dropdown-hover" href="#"> Spotify 2 </a>
                             <div class="dropdown-divider"></div>
                             <!-- Use PHP to check Session or Cookie for being looged in -->
