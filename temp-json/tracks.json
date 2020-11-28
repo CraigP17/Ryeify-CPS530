@@ -1,0 +1,961 @@
+{
+  "items": [
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3EaMbsBlExxNxLvTJcZvDq"
+            },
+            "href": "https://api.spotify.com/v1/artists/3EaMbsBlExxNxLvTJcZvDq",
+            "id": "3EaMbsBlExxNxLvTJcZvDq",
+            "name": "July Talk",
+            "type": "artist",
+            "uri": "spotify:artist:3EaMbsBlExxNxLvTJcZvDq"
+          }
+        ],
+        "available_markets": [
+          "CA"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4IDCNcbSrNEeZqUzbZ8b34"
+        },
+        "href": "https://api.spotify.com/v1/albums/4IDCNcbSrNEeZqUzbZ8b34",
+        "id": "4IDCNcbSrNEeZqUzbZ8b34",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27389e5591eb407515045bb3f09",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0289e5591eb407515045bb3f09",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485189e5591eb407515045bb3f09",
+            "width": 64
+          }
+        ],
+        "name": "Pray For It",
+        "release_date": "2020-07-10",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4IDCNcbSrNEeZqUzbZ8b34"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3EaMbsBlExxNxLvTJcZvDq"
+          },
+          "href": "https://api.spotify.com/v1/artists/3EaMbsBlExxNxLvTJcZvDq",
+          "id": "3EaMbsBlExxNxLvTJcZvDq",
+          "name": "July Talk",
+          "type": "artist",
+          "uri": "spotify:artist:3EaMbsBlExxNxLvTJcZvDq"
+        }
+      ],
+      "available_markets": [
+        "CA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 231269,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "CA8OU2000003"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6aHvckZQn0RLt6jfViRpdj"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6aHvckZQn0RLt6jfViRpdj",
+      "id": "6aHvckZQn0RLt6jfViRpdj",
+      "is_local": false,
+      "name": "Life Of The Party",
+      "popularity": 27,
+      "preview_url": "https://p.scdn.co/mp3-preview/f7e50614771d5c973a8e115ef490983408bcd98b?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:6aHvckZQn0RLt6jfViRpdj"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
+            },
+            "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
+            "id": "2YOYua8FpudSEiB9s88IgQ",
+            "name": "Yung Gravy",
+            "type": "artist",
+            "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6xd9phTkcEIsi1JWhbxZM3"
+        },
+        "href": "https://api.spotify.com/v1/albums/6xd9phTkcEIsi1JWhbxZM3",
+        "id": "6xd9phTkcEIsi1JWhbxZM3",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27315353ebee04814bb8153aa74",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0215353ebee04814bb8153aa74",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485115353ebee04814bb8153aa74",
+            "width": 64
+          }
+        ],
+        "name": "Sensational",
+        "release_date": "2019-05-31",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "type": "album",
+        "uri": "spotify:album:6xd9phTkcEIsi1JWhbxZM3"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
+          },
+          "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
+          "id": "2YOYua8FpudSEiB9s88IgQ",
+          "name": "Yung Gravy",
+          "type": "artist",
+          "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 169600,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUM71907205"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3qOkkP9JLltoUvaLjEXTmW"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3qOkkP9JLltoUvaLjEXTmW",
+      "id": "3qOkkP9JLltoUvaLjEXTmW",
+      "is_local": false,
+      "name": "Gravy Train",
+      "popularity": 62,
+      "preview_url": "https://p.scdn.co/mp3-preview/f6950b3c3794873e5b80f146aebfabdb47557ece?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:3qOkkP9JLltoUvaLjEXTmW"
+    },
+    {
+      "album": {
+        "album_type": "COMPILATION",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+            },
+            "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+            "id": "15UsOTVnJzReFVN1VCnxy4",
+            "name": "XXXTENTACION",
+            "type": "artist",
+            "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3vpXJ54S3MXLyzysw8qq7c"
+        },
+        "href": "https://api.spotify.com/v1/albums/3vpXJ54S3MXLyzysw8qq7c",
+        "id": "3vpXJ54S3MXLyzysw8qq7c",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735485ea186d6971e18fabcc2f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025485ea186d6971e18fabcc2f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515485ea186d6971e18fabcc2f",
+            "width": 64
+          }
+        ],
+        "name": "Revenge",
+        "release_date": "2017-05-16",
+        "release_date_precision": "day",
+        "total_tracks": 7,
+        "type": "album",
+        "uri": "spotify:album:3vpXJ54S3MXLyzysw8qq7c"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+          },
+          "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+          "id": "15UsOTVnJzReFVN1VCnxy4",
+          "name": "XXXTENTACION",
+          "type": "artist",
+          "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 101851,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUYG1142051"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2ooF4088y5L72c4YTEJQoB"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2ooF4088y5L72c4YTEJQoB",
+      "id": "2ooF4088y5L72c4YTEJQoB",
+      "is_local": false,
+      "name": "YuNg BrAtZ",
+      "popularity": 75,
+      "preview_url": "https://p.scdn.co/mp3-preview/94a43e2f573e72fb147009dff4a258fe8b7ca902?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:2ooF4088y5L72c4YTEJQoB"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5CPxrqCStgt6AfI4fLiedH"
+            },
+            "href": "https://api.spotify.com/v1/artists/5CPxrqCStgt6AfI4fLiedH",
+            "id": "5CPxrqCStgt6AfI4fLiedH",
+            "name": "The Glorious Sons",
+            "type": "artist",
+            "uri": "spotify:artist:5CPxrqCStgt6AfI4fLiedH"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7g7Hg7wV4np0WlNdMf2t8c"
+        },
+        "href": "https://api.spotify.com/v1/albums/7g7Hg7wV4np0WlNdMf2t8c",
+        "id": "7g7Hg7wV4np0WlNdMf2t8c",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273598fdc77baf0d987543b6f53",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02598fdc77baf0d987543b6f53",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851598fdc77baf0d987543b6f53",
+            "width": 64
+          }
+        ],
+        "name": "SOS Tour - Live in Vancouver (11/02/18)",
+        "release_date": "2020-05-08",
+        "release_date_precision": "day",
+        "total_tracks": 18,
+        "type": "album",
+        "uri": "spotify:album:7g7Hg7wV4np0WlNdMf2t8c"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5CPxrqCStgt6AfI4fLiedH"
+          },
+          "href": "https://api.spotify.com/v1/artists/5CPxrqCStgt6AfI4fLiedH",
+          "id": "5CPxrqCStgt6AfI4fLiedH",
+          "name": "The Glorious Sons",
+          "type": "artist",
+          "uri": "spotify:artist:5CPxrqCStgt6AfI4fLiedH"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 295085,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "CABD62006901"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6NImsIoAxoQ54UqA0eEBux"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6NImsIoAxoQ54UqA0eEBux",
+      "id": "6NImsIoAxoQ54UqA0eEBux",
+      "is_local": false,
+      "name": "White Noise - SOS Tour Live in Vancouver",
+      "popularity": 19,
+      "preview_url": "https://p.scdn.co/mp3-preview/0514efb9a8fa4815571b77c0510286641e8168ba?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:6NImsIoAxoQ54UqA0eEBux"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
+            },
+            "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
+            "id": "0C0XlULifJtAgn6ZNCW2eu",
+            "name": "The Killers",
+            "type": "artist",
+            "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "available_markets": [
+
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/72ZfMxLCPG8mlWC0TXfZQi"
+        },
+        "href": "https://api.spotify.com/v1/albums/72ZfMxLCPG8mlWC0TXfZQi",
+        "id": "72ZfMxLCPG8mlWC0TXfZQi",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f65523eab3152dcca83b6fca",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f65523eab3152dcca83b6fca",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f65523eab3152dcca83b6fca",
+            "width": 64
+          }
+        ],
+        "name": "Wonderful Wonderful",
+        "release_date": "2017-09-22",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:72ZfMxLCPG8mlWC0TXfZQi"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
+          },
+          "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
+          "id": "0C0XlULifJtAgn6ZNCW2eu",
+          "name": "The Killers",
+          "type": "artist",
+          "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
+        }
+      ],
+      "available_markets": [
+
+      ],
+      "disc_number": 1,
+      "duration_ms": 264480,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUM71707341"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4EcJBIXjI5y9TA6CBfIljo"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4EcJBIXjI5y9TA6CBfIljo",
+      "id": "4EcJBIXjI5y9TA6CBfIljo",
+      "is_local": false,
+      "name": "Rut",
+      "popularity": 49,
+      "preview_url": "https://p.scdn.co/mp3-preview/8de7e3c0314716702455d59ac5657901cc25475f?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:4EcJBIXjI5y9TA6CBfIljo"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
+            },
+            "href": "https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U",
+            "id": "4LLpKhyESsyAXpc4laK94U",
+            "name": "Mac Miller",
+            "type": "artist",
+            "uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5ICp41WijCKVXXtxS0BVx8"
+        },
+        "href": "https://api.spotify.com/v1/albums/5ICp41WijCKVXXtxS0BVx8",
+        "id": "5ICp41WijCKVXXtxS0BVx8",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c7d17e0fc5e9b5d963bda62d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c7d17e0fc5e9b5d963bda62d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c7d17e0fc5e9b5d963bda62d",
+            "width": 64
+          }
+        ],
+        "name": "Knock Knock - Single",
+        "release_date": "2010",
+        "release_date_precision": "year",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:5ICp41WijCKVXXtxS0BVx8"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
+          },
+          "href": "https://api.spotify.com/v1/artists/4LLpKhyESsyAXpc4laK94U",
+          "id": "4LLpKhyESsyAXpc4laK94U",
+          "name": "Mac Miller",
+          "type": "artist",
+          "uri": "spotify:artist:4LLpKhyESsyAXpc4laK94U"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 202806,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USA2P1122877"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3uYm4MtU6jUQft2DtGqEoZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3uYm4MtU6jUQft2DtGqEoZ",
+      "id": "3uYm4MtU6jUQft2DtGqEoZ",
+      "is_local": false,
+      "name": "Knock Knock",
+      "popularity": 70,
+      "preview_url": "https://p.scdn.co/mp3-preview/0f6e257ecfaf482e16c4200d375b1fc4d41ac1cc?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3uYm4MtU6jUQft2DtGqEoZ"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
+            },
+            "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
+            "id": "0C0XlULifJtAgn6ZNCW2eu",
+            "name": "The Killers",
+            "type": "artist",
+            "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1uROBP2G4MP0O4w1v5Cpbg"
+        },
+        "href": "https://api.spotify.com/v1/albums/1uROBP2G4MP0O4w1v5Cpbg",
+        "id": "1uROBP2G4MP0O4w1v5Cpbg",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f08d82ff69ae975e6e5f395e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f08d82ff69ae975e6e5f395e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f08d82ff69ae975e6e5f395e",
+            "width": 64
+          }
+        ],
+        "name": "Imploding The Mirage",
+        "release_date": "2020-08-21",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:1uROBP2G4MP0O4w1v5Cpbg"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
+          },
+          "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
+          "id": "0C0XlULifJtAgn6ZNCW2eu",
+          "name": "The Killers",
+          "type": "artist",
+          "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 274453,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUM72005112"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5NnQpVPJKpFdGFkIdY1Gds"
+      },
+      "href": "https://api.spotify.com/v1/tracks/5NnQpVPJKpFdGFkIdY1Gds",
+      "id": "5NnQpVPJKpFdGFkIdY1Gds",
+      "is_local": false,
+      "name": "My Own Soul’s Warning",
+      "popularity": 63,
+      "preview_url": "https://p.scdn.co/mp3-preview/d24fb5e96162a97329317ced6000ed2ede57d569?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:5NnQpVPJKpFdGFkIdY1Gds"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3EaMbsBlExxNxLvTJcZvDq"
+            },
+            "href": "https://api.spotify.com/v1/artists/3EaMbsBlExxNxLvTJcZvDq",
+            "id": "3EaMbsBlExxNxLvTJcZvDq",
+            "name": "July Talk",
+            "type": "artist",
+            "uri": "spotify:artist:3EaMbsBlExxNxLvTJcZvDq"
+          }
+        ],
+        "available_markets": [
+          "CA"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4IDCNcbSrNEeZqUzbZ8b34"
+        },
+        "href": "https://api.spotify.com/v1/albums/4IDCNcbSrNEeZqUzbZ8b34",
+        "id": "4IDCNcbSrNEeZqUzbZ8b34",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27389e5591eb407515045bb3f09",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0289e5591eb407515045bb3f09",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485189e5591eb407515045bb3f09",
+            "width": 64
+          }
+        ],
+        "name": "Pray For It",
+        "release_date": "2020-07-10",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4IDCNcbSrNEeZqUzbZ8b34"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3EaMbsBlExxNxLvTJcZvDq"
+          },
+          "href": "https://api.spotify.com/v1/artists/3EaMbsBlExxNxLvTJcZvDq",
+          "id": "3EaMbsBlExxNxLvTJcZvDq",
+          "name": "July Talk",
+          "type": "artist",
+          "uri": "spotify:artist:3EaMbsBlExxNxLvTJcZvDq"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2C5lN4qvUtD2BgRzl5iEHG"
+          },
+          "href": "https://api.spotify.com/v1/artists/2C5lN4qvUtD2BgRzl5iEHG",
+          "id": "2C5lN4qvUtD2BgRzl5iEHG",
+          "name": "James Baley",
+          "type": "artist",
+          "uri": "spotify:artist:2C5lN4qvUtD2BgRzl5iEHG"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7wzZ8mQWZVqlMRVoctu4Z9"
+          },
+          "href": "https://api.spotify.com/v1/artists/7wzZ8mQWZVqlMRVoctu4Z9",
+          "id": "7wzZ8mQWZVqlMRVoctu4Z9",
+          "name": "Kyla Charter",
+          "type": "artist",
+          "uri": "spotify:artist:7wzZ8mQWZVqlMRVoctu4Z9"
+        }
+      ],
+      "available_markets": [
+        "CA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 312969,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "CA8OU2000021"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2cVCVP2Y00WPycn9rzHh06"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2cVCVP2Y00WPycn9rzHh06",
+      "id": "2cVCVP2Y00WPycn9rzHh06",
+      "is_local": false,
+      "name": "Champagne",
+      "popularity": 26,
+      "preview_url": "https://p.scdn.co/mp3-preview/7b44dae4f66cb62ecbe3e3b2d840d67e4d9e66d5?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:2cVCVP2Y00WPycn9rzHh06"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0QHgL1lAIqAw0HtD7YldmP"
+            },
+            "href": "https://api.spotify.com/v1/artists/0QHgL1lAIqAw0HtD7YldmP",
+            "id": "0QHgL1lAIqAw0HtD7YldmP",
+            "name": "DJ Khaled",
+            "type": "artist",
+            "uri": "spotify:artist:0QHgL1lAIqAw0HtD7YldmP"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
+            },
+            "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+            "id": "3TVXtAsR1Inumwj472S9r4",
+            "name": "Drake",
+            "type": "artist",
+            "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5nNtpPsSUgb9Hlb3dF1gXa"
+        },
+        "href": "https://api.spotify.com/v1/albums/5nNtpPsSUgb9Hlb3dF1gXa",
+        "id": "5nNtpPsSUgb9Hlb3dF1gXa",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273efaecb4b9cbae7c120d14617",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02efaecb4b9cbae7c120d14617",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851efaecb4b9cbae7c120d14617",
+            "width": 64
+          }
+        ],
+        "name": "POPSTAR (feat. Drake)",
+        "release_date": "2020-07-17",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:5nNtpPsSUgb9Hlb3dF1gXa"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0QHgL1lAIqAw0HtD7YldmP"
+          },
+          "href": "https://api.spotify.com/v1/artists/0QHgL1lAIqAw0HtD7YldmP",
+          "id": "0QHgL1lAIqAw0HtD7YldmP",
+          "name": "DJ Khaled",
+          "type": "artist",
+          "uri": "spotify:artist:0QHgL1lAIqAw0HtD7YldmP"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
+          },
+          "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+          "id": "3TVXtAsR1Inumwj472S9r4",
+          "name": "Drake",
+          "type": "artist",
+          "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 200221,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USSM12004501"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6EDO9iiTtwNv6waLwa1UUq"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6EDO9iiTtwNv6waLwa1UUq",
+      "id": "6EDO9iiTtwNv6waLwa1UUq",
+      "is_local": false,
+      "name": "POPSTAR (feat. Drake)",
+      "popularity": 90,
+      "preview_url": "https://p.scdn.co/mp3-preview/f06dde25172503546a3b136fba9822a89866a2d3?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:6EDO9iiTtwNv6waLwa1UUq"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz"
+            },
+            "href": "https://api.spotify.com/v1/artists/4MCBfE4596Uoi2O4DtmEMz",
+            "id": "4MCBfE4596Uoi2O4DtmEMz",
+            "name": "Juice WRLD",
+            "type": "artist",
+            "uri": "spotify:artist:4MCBfE4596Uoi2O4DtmEMz"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1GYVNOzwhx1nMcIJDogSNp"
+        },
+        "href": "https://api.spotify.com/v1/albums/1GYVNOzwhx1nMcIJDogSNp",
+        "id": "1GYVNOzwhx1nMcIJDogSNp",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273af149eb4002f65f83afc63c4",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02af149eb4002f65f83afc63c4",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851af149eb4002f65f83afc63c4",
+            "width": 64
+          }
+        ],
+        "name": "Death Race For Love",
+        "release_date": "2019-03-08",
+        "release_date_precision": "day",
+        "total_tracks": 22,
+        "type": "album",
+        "uri": "spotify:album:1GYVNOzwhx1nMcIJDogSNp"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz"
+          },
+          "href": "https://api.spotify.com/v1/artists/4MCBfE4596Uoi2O4DtmEMz",
+          "id": "4MCBfE4596Uoi2O4DtmEMz",
+          "name": "Juice WRLD",
+          "type": "artist",
+          "uri": "spotify:artist:4MCBfE4596Uoi2O4DtmEMz"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 240050,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUG11900302"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6Hj9jySrnFppAI0sEMCZpJ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6Hj9jySrnFppAI0sEMCZpJ",
+      "id": "6Hj9jySrnFppAI0sEMCZpJ",
+      "is_local": false,
+      "name": "Robbery",
+      "popularity": 88,
+      "preview_url": "https://p.scdn.co/mp3-preview/8582f697f13ad7d10708b9d3dba521092cdb5605?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:6Hj9jySrnFppAI0sEMCZpJ"
+    },
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6s22t5Y3prQHyaHWUN1R1C"
+            },
+            "href": "https://api.spotify.com/v1/artists/6s22t5Y3prQHyaHWUN1R1C",
+            "id": "6s22t5Y3prQHyaHWUN1R1C",
+            "name": "AJR",
+            "type": "artist",
+            "uri": "spotify:artist:6s22t5Y3prQHyaHWUN1R1C"
+          }
+        ],
+        "available_markets": [
+          "CA"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2eq39cS6fDTB9W3xwz8l4w"
+        },
+        "href": "https://api.spotify.com/v1/albums/2eq39cS6fDTB9W3xwz8l4w",
+        "id": "2eq39cS6fDTB9W3xwz8l4w",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734a8dd8b6bc975a0cb336491f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024a8dd8b6bc975a0cb336491f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514a8dd8b6bc975a0cb336491f",
+            "width": 64
+          }
+        ],
+        "name": "Bang! (AhhHaa Remix)",
+        "release_date": "2020-08-17",
+        "release_date_precision": "day",
+        "total_tracks": 2,
+        "type": "album",
+        "uri": "spotify:album:2eq39cS6fDTB9W3xwz8l4w"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6s22t5Y3prQHyaHWUN1R1C"
+          },
+          "href": "https://api.spotify.com/v1/artists/6s22t5Y3prQHyaHWUN1R1C",
+          "id": "6s22t5Y3prQHyaHWUN1R1C",
+          "name": "AJR",
+          "type": "artist",
+          "uri": "spotify:artist:6s22t5Y3prQHyaHWUN1R1C"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3LjhVl7GzYsza1biQjTpaN"
+          },
+          "href": "https://api.spotify.com/v1/artists/3LjhVl7GzYsza1biQjTpaN",
+          "id": "3LjhVl7GzYsza1biQjTpaN",
+          "name": "Hayley Kiyoko",
+          "type": "artist",
+          "uri": "spotify:artist:3LjhVl7GzYsza1biQjTpaN"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3rnpSVwAs2cQoB2OtHZk8m"
+          },
+          "href": "https://api.spotify.com/v1/artists/3rnpSVwAs2cQoB2OtHZk8m",
+          "id": "3rnpSVwAs2cQoB2OtHZk8m",
+          "name": "AhhHaa",
+          "type": "artist",
+          "uri": "spotify:artist:3rnpSVwAs2cQoB2OtHZk8m"
+        }
+      ],
+      "available_markets": [
+        "CA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 167649,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QMRSZ2001979"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0AQfN8vkPv4cv107F3prKb"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0AQfN8vkPv4cv107F3prKb",
+      "id": "0AQfN8vkPv4cv107F3prKb",
+      "is_local": false,
+      "name": "Bang! - AhhHaa Remix",
+      "popularity": 34,
+      "preview_url": "https://p.scdn.co/mp3-preview/ba5d07f5fdc04be5a0164b23c091109c8b10c8d1?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:0AQfN8vkPv4cv107F3prKb"
+    }
+  ],
+  "total": 50,
+  "limit": 20,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/tracks",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/tracks?limit=20&offset=20"
+}
