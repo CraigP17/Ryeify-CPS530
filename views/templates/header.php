@@ -15,8 +15,10 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark nav-color">
-            <a class="navbar-brand" href="#">PROJECT NAME</a>
+        <nav class="site-header navbar navbar-expand-lg sticky-top navbar-dark nav-color">
+            <a class="navbar-brand" href="#">
+                <img src="/public/img/ryeify-logo.png" alt="Ryeify Logo">
+            </a>
             
             <!-- Responsive Nav Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +29,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="#"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown text-center">
+                        <a class="nav-link text-light text-center" href="#"> Midi </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="#"> Trending Songs </a>
@@ -57,6 +62,6 @@
             </div>
         </nav>
         
-        <div class="container-fluid bg-dark text-light main-container">
+        <div class="container-fluid text-light main-container">
             
             <div class="content pt-3">

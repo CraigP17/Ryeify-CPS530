@@ -21,8 +21,10 @@
         echo "<img src='".$source."' height = '400'>";
         $source2 = $songs['track']['preview_url'];
         echo "<br>";
-        echo "<video width = '250' height='75' controls='' autoplay='' name='media'><source src='".$source2."' type='audio/mpeg'></video>";
+        echo "<video width = '250' height='75' controls=''  name='media'><source src='".$source2."' type='audio/mpeg'></video>";
         echo '</div>';
+
+
 
 
 
