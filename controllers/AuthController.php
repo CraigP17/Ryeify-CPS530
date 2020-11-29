@@ -6,9 +6,39 @@ namespace app\controllers;
 use app\core\Controller;
 use app\models\LoginModel;
 use app\models\RegisterModel;
+use Application;
 
 class AuthController extends Controller
 {
+
+    public function register($request)
+    {
+        $registerModel = new RegisterModel();
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $registerModel->loadData($request->getBody());
+
+            if ($registerModel->validate() && $registerModel->register())
+            {
+                Application::$app->session->setFlash('success', 'Thanks for registering!');
+                Application::$app->response->redirect('/login');
+                return 0;
+            }
+
+            return $this->render('register', [
+                'model' => $registerModel
+            ]);
+        }
+
+        // GET request
+        // return register view
+        $this->setLayout('auth');
+        return $this->render('register', [
+            'model' => $registerModel
+        ]);
+    }
+
     public function login($request, $response)
     {
         $loginForm = new LoginModel();
@@ -29,12 +59,21 @@ class AuthController extends Controller
         ]);
     }
 
+    public function logout($request, $response)
+    {
+        Application::$app->logout();
+        $response->redirect('/');
+    }
+
+
+    // ===== ===== Spotify OAuth2 ===== =====
+
     public function spotifyAuth($request, $response)
     {
         $url      = "https://accounts.spotify.com/authorize";
-        $client   = "client_id=" . \Application::$app->config['client_id'];
+        $client   = "client_id=" . Application::$app->config['client_id'];
         $resp     = "response_type=code";
-        $redirect = "redirect_uri=" . \Application::$app->config['client_redirect'];
+        $redirect = "redirect_uri=" . Application::$app->config['client_redirect'];
         $scope    = "scope=user-read-private%20user-read-email%20user-top-read";
         $state    = "state=34fFs29kd09";
 
@@ -48,10 +87,11 @@ class AuthController extends Controller
             $response->redirect('/error');
         }
         $state = $_GET['state'] ?? '';
+        // TODO: Check state var
         $code = $_GET['code'] ?? '';
-        $redirect = "redirect_uri=" . \Application::$app->config['client_redirect'];
+        $redirect = "redirect_uri=" . Application::$app->config['client_redirect'];
 
-        $auth = base64_encode(\Application::$app->config['client_id'] . ":" .  \Application::$app->config['client_secret']);
+        $auth = base64_encode(Application::$app->config['client_id'] . ":" .  Application::$app->config['client_secret']);
 
         $curl = curl_init();
 
@@ -84,12 +124,12 @@ class AuthController extends Controller
             $_SESSION['access_token_time'] = time();
             $_SESSION['refresh_token'] = $arr_response['refresh_token'];
             $_SESSION['active'] = true;
-            \Application::$app->response->redirect('/spotify-connected');
+            Application::$app->response->redirect('/spotify-connected');
             return;
             // TODO: On Application check bearer token, add case of logged in user
             // TODO: On logout, remove active session and other tokens
         }
-        \Application::$app->response->redirect('/error');
+        Application::$app->response->redirect('/error');
     }
 
     public function spotifyConnected($request, $response)
@@ -100,39 +140,6 @@ class AuthController extends Controller
             return $this->render('spotify-connected');
         }
         return $this->render('error');
-    }
-
-    public function logout($request, $response)
-    {
-        \Application::$app->logout();
-        $response->redirect('/');
-    }
-
-    public function register($request)
-    {
-        $registerModel = new RegisterModel();
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
-            $registerModel->loadData($request->getBody());
-
-            if ($registerModel->validate() && $registerModel->register())
-            {
-                \Application::$app->session->setFlash('success', 'Thanks for registering!');
-                \Application::$app->response->redirect('/');
-                return 0;
-            }
-
-            return $this->render('register', [
-                'model' => $registerModel
-            ]);
-        }
-        // GET request
-        // return register view
-        $this->setLayout('auth');
-        return $this->render('register', [
-            'model' => $registerModel
-        ]);
     }
 
 }
