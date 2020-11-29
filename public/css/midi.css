@@ -2,7 +2,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .piano {
@@ -58,12 +57,19 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+.card{
+    border-radius: 10px;
+    margin-top: 2.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 @media only screen and (max-width: 768px) {
     .white {
-        --width: 60px;
+        --width: 70px;
     }
 
     .black {
-        --width: 35px;
+        --width: 45px;
     }
 }

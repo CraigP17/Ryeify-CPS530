@@ -1,5 +1,6 @@
 <?php ?>
 
+<div class="container">
 <h1>Trending Songs</h1>
 <div class="row d-flex justify-content-center">
 
@@ -23,4 +24,5 @@ echo"<div class = 'row'>";
         echo "<video width = '250' height='75' controls=''  name='media'><source src='".$source2."' type='audio/mpeg'></video>";
         echo '</div>';
     } ?>
+</div>
 </div>

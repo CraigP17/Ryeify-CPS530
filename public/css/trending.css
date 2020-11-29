@@ -43,7 +43,7 @@ h2.test {
     display: inline-block;
 }
 
-img {
+.trending-div img {
     -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
 }

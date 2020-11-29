@@ -23,6 +23,7 @@ body{
 
 .main-container {
     min-height: 95vh;
+    background-color: black;
 }
 
 .nav-color {
