@@ -48,4 +48,6 @@ $app->router->get('/spotify-connected', [AuthController::class, 'spotifyConnecte
 
 $app->router->get('/personalized', [SiteController::class, 'personalized']);
 
+$app->router->get('/profile', [AuthController::class, 'profile']);
+
 $app->run();
