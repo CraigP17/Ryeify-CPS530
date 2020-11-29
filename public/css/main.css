@@ -50,3 +50,25 @@ a.dropdown-hover:hover {
     -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
     backdrop-filter: saturate(180%) blur(20px) !important;
 }
+
+.personalized-albums {
+    display: inline-block;
+    text-align: center;  
+    position: relative;
+
+}
+
+.personalized-albums img {
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    padding: 10px;
+    display: block;
+    transition: .10s ease;
+}
+
+.personalized-albums:hover .img
+{
+    opacity: 0.5;
+}
