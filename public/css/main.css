@@ -9,7 +9,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 /*Setting up global styles and colors uniformity via css variables*/
-
 :root {
     --navblack: #070707;
     --navwhite: #ffffff;
@@ -53,24 +52,5 @@ a.dropdown-hover:hover {
     backdrop-filter: saturate(180%) blur(20px) !important;
 }
 
-.personalized-albums {
-    display: inline-block;
-    text-align: center;  
-    position: relative;
 
-}
-
-.personalized-albums img {
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 1;
-    padding: 10px;
-    display: block;
-    transition: .10s ease;
-}
-
-.personalized-albums:hover .img
-{
-    opacity: 0.5;
-}
+    
