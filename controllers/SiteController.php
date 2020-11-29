@@ -34,116 +34,17 @@ class SiteController extends Controller
 
     public function personalized()
     {
-        $tracks = '{
-            "items" : [ 
-                {
-                    "external_urls" : {
-                        "spotify" : "https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"
-                    },
-                    "followers" : {
-                        "href" : null,
-                      "total" : 7753
-                    },
-                    "genres" : [ "swedish hip hop" ],
-                    "href" : "https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id" : "0I2XqVXqHScXjHhk6AYYRe",
-                    "images" : [ {
-                        "height" : 640,
-                      "url" : "https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20",
-                      "width" : 640
-                    }, {
-                        "height" : 300,
-                      "url" : "https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7",
-                      "width" : 300
-                    }, {
-                        "height" : 64,
-                      "url" : "https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf",
-                      "width" : 64
-                    } ],
-                    "name" : "Afasi & Filthy",
-                    "popularity" : 54,
-                    "type" : "artist",
-                    "uri" : "spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                },
-                {
-                    "external_urls":{"spotify":"https://open.spotify.com/artist/0I2XqVXqHScXjHhk6AYYRe"},
-                    "followers":{"href":null,"total":7753},
-                    "genres":["swedishhiphop"],
-                    "href":"https://api.spotify.com/v1/artists/0I2XqVXqHScXjHhk6AYYRe",
-                    "id":"0I2XqVXqHScXjHhk6AYYRe",
-                    "images":[{"height":640,"url":"https://i.scdn.co/image/2c8c0cea05bf3d3c070b7498d8d0b957c4cdec20","width":640},{
-                    "height":300,"url":"https://i.scdn.co/image/394302b42c4b894786943e028cdd46d7baaa29b7","width":300},{
-                    "height":64,"url":"https://i.scdn.co/image/ca9df7225ade6e5dfc62e7076709ca3409a7cbbf","width":64}],
-                    "name":"Afasi&Filthy","popularity":54,"type":"artist","uri":"spotify:artist:0I2XqVXqHScXjHhk6AYYRe"
-                }
-            ],
-            "next" : "https://api.spotify.com/v1/me/top/artists?offset=20",
-            "previous" : null,
-            "total" : 50,
-            "limit" : 20,
-            "href" : "https://api.spotify.com/v1/me/top/artists"
-        }';
-        $encoded_data = json_encode($tracks);
-        $decoded_data = json_decode($encoded_data, true);
+        $tracks_json = file_get_contents("../temp-json/tracks.json");
+        $tracks = json_decode($tracks_json, true);
+        $artists_json = file_get_contents("../temp-json/artists.json");
+        $artists = json_decode($artists_json, true);
         $params = [
-            'tracks' => $tracks
+            'tracks' => $tracks,
+            'artists' => $artists
         ];
-
+        var_dump($tracks['items'][0]['name'], $tracks['items'][0]['artists'][0]['name'], $tracks['items'][0]['album']['name']);
+        echo '<br>';
+        var_dump($artists['items'][0]['name'], $artists['items'][0]['genres']);
         return $this->render('personalized', $params);
     }
 

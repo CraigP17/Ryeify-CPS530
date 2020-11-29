@@ -7,6 +7,7 @@
         <meta name="author" content="Craig Pinto, Hitarth Chudgar, Homayra Mussarrat, Manpreet Rajpal">
 
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/trending.css">
         <script type="text/javascript" src="/js/main.js"></script>
 
         <!-- Bootstrap CSS -->

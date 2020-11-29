@@ -1,0 +1,538 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0C0XlULifJtAgn6ZNCW2eu"
+      },
+      "followers": {
+        "href": null,
+        "total": 5665739
+      },
+      "genres": [
+        "modern rock",
+        "permanent wave",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0C0XlULifJtAgn6ZNCW2eu",
+      "id": "0C0XlULifJtAgn6ZNCW2eu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c85f1ea9f92dc0cc43965a0c727c4a1cdd1c2540",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ed9a0918a792c5af1ca3461f40670016a0c8f854",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/fb8fcdac51e0b606124f2d5005107c3466cbc5ad",
+          "width": 160
+        }
+      ],
+      "name": "The Killers",
+      "popularity": 82,
+      "type": "artist",
+      "uri": "spotify:artist:0C0XlULifJtAgn6ZNCW2eu"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3EaMbsBlExxNxLvTJcZvDq"
+      },
+      "followers": {
+        "href": null,
+        "total": 95941
+      },
+      "genres": [
+        "canadian indie",
+        "toronto indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3EaMbsBlExxNxLvTJcZvDq",
+      "id": "3EaMbsBlExxNxLvTJcZvDq",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8d6ee1d8b12f35087a21ec8aaabebfc9eadf33ea",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c44701c8237999055e520443aad61c5b285a359f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/76296f6fd886220f4ddf340196b236b5eb8d055d",
+          "width": 160
+        }
+      ],
+      "name": "July Talk",
+      "popularity": 50,
+      "type": "artist",
+      "uri": "spotify:artist:3EaMbsBlExxNxLvTJcZvDq"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5CPxrqCStgt6AfI4fLiedH"
+      },
+      "followers": {
+        "href": null,
+        "total": 130026
+      },
+      "genres": [
+        "canadian indie",
+        "canadian rock",
+        "kingston on indie",
+        "modern alternative rock",
+        "modern rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5CPxrqCStgt6AfI4fLiedH",
+      "id": "5CPxrqCStgt6AfI4fLiedH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/74aa56c64629ac24bb2704bd7fe26b3d6b872e85",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/2503f58e42146101d784a2cfea83437065f88396",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/1304a01d8d8a16763f33a16a4b6241f3733c12d3",
+          "width": 160
+        }
+      ],
+      "name": "The Glorious Sons",
+      "popularity": 60,
+      "type": "artist",
+      "uri": "spotify:artist:5CPxrqCStgt6AfI4fLiedH"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6s22t5Y3prQHyaHWUN1R1C"
+      },
+      "followers": {
+        "href": null,
+        "total": 1488272
+      },
+      "genres": [
+        "modern rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6s22t5Y3prQHyaHWUN1R1C",
+      "id": "6s22t5Y3prQHyaHWUN1R1C",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ce07af97cf3c49b36eb3a5f7a27d59be35e971eb",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/4745d41538f92faf4d00552ab5abf5779489d229",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/c6613ce1f597d48b7e130f484468910adeb60aba",
+          "width": 160
+        }
+      ],
+      "name": "AJR",
+      "popularity": 79,
+      "type": "artist",
+      "uri": "spotify:artist:6s22t5Y3prQHyaHWUN1R1C"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3ShGiAyhxI6Rq3TknZ3gfk"
+      },
+      "followers": {
+        "href": null,
+        "total": 132720
+      },
+      "genres": [
+        "canadian indie",
+        "canadian rock",
+        "canadian singer-songwriter",
+        "deep new americana",
+        "hamilton on indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3ShGiAyhxI6Rq3TknZ3gfk",
+      "id": "3ShGiAyhxI6Rq3TknZ3gfk",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ec1b6247ff385eb86c5eb0fb1af0a38cdb6b2dc5",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/7e31037673923722c79a4a52d77cca1be1e8bc38",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/1c0db478d4848774573e36c353141610e88925b9",
+          "width": 160
+        }
+      ],
+      "name": "Arkells",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:3ShGiAyhxI6Rq3TknZ3gfk"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2ysnwxxNtSgbb9t1m2Ur4j"
+      },
+      "followers": {
+        "href": null,
+        "total": 3299405
+      },
+      "genres": [
+        "folk-pop",
+        "modern rock",
+        "neo-singer-songwriter",
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2ysnwxxNtSgbb9t1m2Ur4j",
+      "id": "2ysnwxxNtSgbb9t1m2Ur4j",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f145882e808633707759012c6417264f657304be",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ad45a120872798a9b98f1585f1c59b68c9a5805d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/52b95d7e8897a07c3c7d843e1f4ae9c61e80c90a",
+          "width": 160
+        }
+      ],
+      "name": "George Ezra",
+      "popularity": 77,
+      "type": "artist",
+      "uri": "spotify:artist:2ysnwxxNtSgbb9t1m2Ur4j"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+      },
+      "followers": {
+        "href": null,
+        "total": 11529961
+      },
+      "genres": [
+        "art pop",
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+      "id": "00FQb4jTyendYWaN8pK0wa",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/6e8dc460cfb6b89d7970302259febd0aa73b38c6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/bcdee6b17410b5d27d40bc114757e38125b00c84",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0c50e5ae217b7a86f9f5114dc5e0f1beb8e9185d",
+          "width": 160
+        }
+      ],
+      "name": "Lana Del Rey",
+      "popularity": 87,
+      "type": "artist",
+      "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0n94vC3S9c3mb2HyNAOcjg"
+      },
+      "followers": {
+        "href": null,
+        "total": 868327
+      },
+      "genres": [
+        "folk-pop",
+        "indie folk",
+        "indie pop",
+        "modern rock",
+        "new americana",
+        "seattle indie",
+        "stomp and holler"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0n94vC3S9c3mb2HyNAOcjg",
+      "id": "0n94vC3S9c3mb2HyNAOcjg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/31c98c4125d3c0ae3e1d7469d138decd15abb039",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/a907135464771facf88cbd379edd3abc5fb550e9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/097a04e69b4d2bee1ba701044c8e9f609cfb972c",
+          "width": 160
+        }
+      ],
+      "name": "The Head and the Heart",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:0n94vC3S9c3mb2HyNAOcjg"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5tFRohaO5yEsuJxmMnlCO9"
+      },
+      "followers": {
+        "href": null,
+        "total": 345765
+      },
+      "genres": [
+        "modern alternative rock",
+        "modern rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5tFRohaO5yEsuJxmMnlCO9",
+      "id": "5tFRohaO5yEsuJxmMnlCO9",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/425f71f53a15590f23681ed3c2730dabca535815",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/3b1258a2b3b48ff285bd75c5aec856205c3b664e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/6d46e881f6850aea3967541f6d0f04ce22229dd6",
+          "width": 160
+        }
+      ],
+      "name": "Barns Courtney",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:5tFRohaO5yEsuJxmMnlCO9"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0fA0VVWsXO9YnASrzqfmYu"
+      },
+      "followers": {
+        "href": null,
+        "total": 4174355
+      },
+      "genres": [
+        "hip hop",
+        "ohio hip hop",
+        "pop rap",
+        "rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0fA0VVWsXO9YnASrzqfmYu",
+      "id": "0fA0VVWsXO9YnASrzqfmYu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e69bd60976fd81d1368adc34423c691d86f92e0d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/36189c388c0953f0e63c15840870e0ac15cf39c5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/e2fbf4240e20a33efa7cbce542df7b7108e872e0",
+          "width": 160
+        }
+      ],
+      "name": "Kid Cudi",
+      "popularity": 84,
+      "type": "artist",
+      "uri": "spotify:artist:0fA0VVWsXO9YnASrzqfmYu"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ"
+      },
+      "followers": {
+        "href": null,
+        "total": 6175740
+      },
+      "genres": [
+        "alternative hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3AA28KZvwAUcZuOKwyblJQ",
+      "id": "3AA28KZvwAUcZuOKwyblJQ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ac945f862e51de5d2a7a0647736d7a1b4217f0f8",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/294ae57f50b41738daca70a886baa55827c09003",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/96cfb96f355bb2f4bf25653f7231cf1e4f4378c0",
+          "width": 160
+        }
+      ],
+      "name": "Gorillaz",
+      "popularity": 84,
+      "type": "artist",
+      "uri": "spotify:artist:3AA28KZvwAUcZuOKwyblJQ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/69tiO1fG8VWduDl3ji2qhI"
+      },
+      "followers": {
+        "href": null,
+        "total": 183203
+      },
+      "genres": [
+        "indie folk",
+        "indie rock",
+        "modern rock",
+        "stomp and holler"
+      ],
+      "href": "https://api.spotify.com/v1/artists/69tiO1fG8VWduDl3ji2qhI",
+      "id": "69tiO1fG8VWduDl3ji2qhI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/b5a08288ed05813d0bffabb6f3704e5d9272dc13",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cdcfc64f6cc00328829e1de52108fa9ad0f22db5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/4b9ddd1a3da46dfea0dc8a1c4548efd9a42366e6",
+          "width": 160
+        }
+      ],
+      "name": "Mt. Joy",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:69tiO1fG8VWduDl3ji2qhI"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/16oZKvXb6WkQlVAjwo2Wbg"
+      },
+      "followers": {
+        "href": null,
+        "total": 4007184
+      },
+      "genres": [
+        "folk-pop",
+        "modern rock",
+        "stomp and holler"
+      ],
+      "href": "https://api.spotify.com/v1/artists/16oZKvXb6WkQlVAjwo2Wbg",
+      "id": "16oZKvXb6WkQlVAjwo2Wbg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/81bc6a0807ec258fc05f5cdd70fa8c4066bd91db",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/18d221a36c5e92182ed379c813599219e2bc737f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/27a2c665e14fd13eeca9b5dc82eef6624db644e8",
+          "width": 160
+        }
+      ],
+      "name": "The Lumineers",
+      "popularity": 81,
+      "type": "artist",
+      "uri": "spotify:artist:16oZKvXb6WkQlVAjwo2Wbg"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9"
+      },
+      "followers": {
+        "href": null,
+        "total": 2248376
+      },
+      "genres": [
+        "irish rock",
+        "pop rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7t0rwkOPGlDPEhaOcVtOt9",
+      "id": "7t0rwkOPGlDPEhaOcVtOt9",
+      "images": [
+        {
+          "height": 667,
+          "url": "https://i.scdn.co/image/143c01f407ed64a4b3bcbc92d24c05ef80981251",
+          "width": 1000
+        },
+        {
+          "height": 427,
+          "url": "https://i.scdn.co/image/a82245ec62ee9606ab456d787f1f7fcd788e6a10",
+          "width": 640
+        },
+        {
+          "height": 133,
+          "url": "https://i.scdn.co/image/3a0e3d6f957d3d713a386aeedd028a8e8a1d8803",
+          "width": 200
+        },
+        {
+          "height": 43,
+          "url": "https://i.scdn.co/image/95b4d133c1e6a19efb05e4becf0f9c46e0894845",
+          "width": 64
+        }
+      ],
+      "name": "The Cranberries",
+      "popularity": 77,
+      "type": "artist",
+      "uri": "spotify:artist:7t0rwkOPGlDPEhaOcVtOt9"
+    }
+  ],
+  "total": 50,
+  "limit": 20,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=20&offset=20"
+}
