@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#result>p {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: left !important;
+    margin-top: 1.5em;
+}
+
+ol.songs {
+    display: grid !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: left !important;
+    line-height: 100%
+}
+
+ol.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 3px;
+}
+
+.more {
+    display: grid !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: left !important;
+    margin-top: 1.5em;
+    overflow-x: hidden;
+}
+
+.centred{
+    display: flex;
+    justify-content: center;
+}
+
+.mb-2,
+.my-2 {
+    margin-bottom: 2rem !important;
+}
