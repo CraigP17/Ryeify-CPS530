@@ -113,7 +113,7 @@ class AuthController extends Controller
         $resp     = "response_type=code";
         $redirect = "redirect_uri=" . Application::$app->config['client_redirect'];
         $scope    = "scope=user-read-private%20user-read-email%20user-top-read";
-        $state    = "state=34fFs29kd09";
+        $state    = "state=" . Application::$app->config['client_redirect'];;
 
         return $response->redirect("$url?$client&$resp&$redirect&$scope&$state");
     }
@@ -130,14 +130,13 @@ class AuthController extends Controller
         {
             Application::$app->response->redirect('/error');
         }
-        // TODO: Check state var
+
         $code = $_GET['code'] ?? '';
         $redirect = "redirect_uri=" . Application::$app->config['client_redirect'];
 
         $auth = base64_encode(Application::$app->config['client_id'] . ":" .  Application::$app->config['client_secret']);
 
         $curl = curl_init();
-
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://accounts.spotify.com/api/token",
             CURLOPT_RETURNTRANSFER => true,
