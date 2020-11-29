@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <h1>A Midi inspired Piano</h1>
+    <h1>A Midi Inspired Piano</h1>
     <div class="row d-flex justify-content-center">
         <div class="piano">
             <div data-note="C" class="key white"></div>
@@ -35,21 +35,82 @@
         <audio id="Bb" src="notes/Bb.mp3"></audio>
         <audio id="B" src="notes/B.mp3"></audio>
         <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+            <div class="card-body">
+                <p class="card-text">MIDI (/ˈmɪdi/; an acronym for Musical Instrument Digital Interface) is a technical
+                    standard that describes a communications protocol, digital interface, and electrical connectors that
+                    connect a wide variety of electronic musical instruments, computers, and related audio devices for
+                    playing, editing and recording music</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>How to play notes?</strong></li>
+                <li class="list-group-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Keystroke</th>
+                                <th scope="col">Corresponding Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Z</th>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">S</th>
+                                <td>Db/C#</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">X</th>
+                                <td>D</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">D</th>
+                                <td>Eb/D#</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">C</th>
+                                <td>E</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">V</th>
+                                <td>F</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">G</th>
+                                <td>Gb/F#</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">B</th>
+                                <td>G</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">H</th>
+                                <td>Ab/G#</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">N</th>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">J</th>
+                                <td>Bb/A#</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">M</th>
+                                <td>B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+            <div class="card-body">
+                <a href="https://en.wikipedia.org/wiki/MIDI_keyboard" target="blank" class="card-link">Learn more about
+                    MIDI</a>
+                <a href="https://www.schoolofrock.com/resources/keyboard/piano-chords-for-beginners" target="blank"
+                    class="card-link">How to play Chords</a>
+            </div>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
     </div>
     <script src="/js/midi.js"></script>
 </body>
