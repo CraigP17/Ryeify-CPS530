@@ -5,13 +5,12 @@
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
     align-items: center;
     text-align: center;
     font-weight: 600 !important;
     font-size: 4em !important;
-    margin-bottom: 1.5em !important;
     background: -webkit-linear-gradient(135deg, #9890e3, #b1f4cf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -26,9 +25,9 @@ h5:nth-child(1){
     font-weight: 600 !important;
 }
 
-h5:nth-child(2) {
-    margin-bottom: 0.8em;
-}
+/*h5:nth-child(2) {*/
+/*    margin-bottom: 0.8em;*/
+/*}*/
 
 h2.test {
     display: none;
@@ -44,6 +43,6 @@ h2.test {
 }
 
 img {
-    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
 }
