@@ -27,6 +27,11 @@ class SiteController extends Controller
         return $this->render('team');
     }
 
+    public function midi()
+    {
+        return $this->render('midi');
+    }
+
     public function personalized()
     {
         $tracks = '{
