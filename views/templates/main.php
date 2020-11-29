@@ -17,8 +17,10 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark nav-color">
-            <a class="navbar-brand" href="/">RYEIFY</a>
+        <nav class="site-header navbar navbar-expand-lg sticky-top navbar-dark nav-color">
+            <a class="navbar-brand" href="/">
+                <img src="/img/ryeify-logo.png" width="130px" height="35.6px" alt="Ryeify Logo">
+            </a>
 
             <!-- Responsive Nav Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,6 +31,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="/"> Home </a>
+                    </li>
+                    <li class="nav-item dropdown text-center">
+                        <a class="nav-link text-light text-center" href="/midi"> Midi </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="/trending"> Trending Songs </a>
@@ -65,7 +70,7 @@
             </div>
         </nav>
 
-        <div class="container-fluid bg-dark text-light main-container">
+        <div class="container-fluid text-light main-container">
 
             <div class="content pt-3">
                 <?php if (Application::$app->session->getFlash('success')): ?>
@@ -102,6 +107,5 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
     </body>
 </html>
