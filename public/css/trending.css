@@ -11,18 +11,22 @@ h1 {
     text-align: center;
     font-weight: 600 !important;
     font-size: 4em !important;
+    margin-bottom: 1em !important;
     background: -webkit-linear-gradient(135deg, #9890e3, #b1f4cf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-h5{
-    color: #1e272e !important;
+.text-secondary{
+    color: white !important;
+    opacity: 85% !important;
+    text-align: left !important;
 }
 
-h5:nth-child(1){
-    color: #1e272e !important;
+h5{
+    color: white !important;
     font-weight: 600 !important;
+    text-align: left !important;
 }
 
 /*h5:nth-child(2) {*/
@@ -42,13 +46,7 @@ h2.test {
     display: inline-block;
 }
 
-<<<<<<< HEAD
 .trending-div img {
-    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
-=======
-img {
     -webkit-box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
->>>>>>> b5b434c2e315ce182be5b042d2d811bde8c0649a
 }

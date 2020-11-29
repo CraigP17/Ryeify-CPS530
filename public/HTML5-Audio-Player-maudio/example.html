@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <title>mAudio: Custom HTML5 Audio Player Demo</title>
+  <link rel="stylesheet" type="text/css" href="./css/maudio.css">
+  <style>
+  body { min-height: 100vh;background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); }
+  #app { margin: 200px auto; max-width: 780px; }
+  h1 { margin: 150px auto 30px auto; text-align: center; }
+</style>
+</head>
+<body>
+  <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/table/jQuery-Dynamic-Data-Grid-Plugin-appendGrid.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1>mAudio: Custom HTML5 Audio Player Demo</h1>
+<div id="app"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="./js/maudio.js"></script>
+<script>
+
+// var h = '<audio controls src="./audio-test-01.mp3" autoplay="autoplay"></audio><audio controls src="https://mycugb.com/17ing/music/yc_yixin_yunkaiwusan.mp3"></audio><audio controls src="https://mycugb.com/17ing/music/17ing_20130508.mp3"></audio>'
+var h = '<audio controls src="./audio-test-01.mp3"></audio>'
+
+$('#app').html(h)
+
+maudio({
+    obj:'audio',
+    fastStep:10
+})
+
+$('audio').on('abort',function(){
+  console.log('abort')
+})
+
+$('audio').on('canplay',function(){
+  console.log('canplay')
+})
+
+$('audio').on('canplaythrough',function(){
+  console.log('canplaythrough')
+})
+
+$('audio').on('durationchange',function(){
+  console.log('durationchange')
+})
+
+$('audio').on('emptied',function(){
+  console.log('emptied')
+})
+
+$('audio').on('ended',function(){
+  console.log('ended')
+})
+
+$('audio').on('error',function(){
+  console.log('error')
+})
+
+$('audio').on('loadeddata',function(){
+  console.log('loadeddata')
+})
+
+$('audio').on('loadedmetadata',function(){
+  console.log('loadedmetadata')
+})
+
+$('audio').on('loadstart',function(){
+  console.log('loadstart')
+})
+
+$('audio').on('pause',function(){
+  console.log('pause')
+})
+
+$('audio').on('play',function(){
+  console.log('play')
+})
+
+$('audio').on('playing',function(){
+  console.log('playing')
+})
+
+$('audio').on('progress',function(){
+  console.log('progress')
+})
+
+$('audio').on('ratechange',function(){
+  console.log('ratechange')
+})
+
+$('audio').on('seeked',function(){
+  console.log('seeked')
+})
+
+$('audio').on('seeking',function(){
+  console.log('seeking')
+})
+
+$('audio').on('stalled',function(){
+  console.log('stalled')
+})
+
+$('audio').on('suspend',function(){
+  console.log('suspend')
+})
+
+$('audio').on('timeupdate',function(){
+  console.log('timeupdate')
+})
+
+$('audio').on('volumechange',function(){
+  console.log('volumechange')
+})
+
+$('audio').on('waiting',function(){
+  console.log('waiting')
+})
+
+
+// $('audio')[0].play()
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
