@@ -1,0 +1,9 @@
+.personalized-albums img{
+    opacity:1;
+    transition: 1s ease;
+    }
+    
+.personalized-albums img:hover{
+    opacity:0.4;
+    transition: 1s ease;
+}
