@@ -1,20 +1,33 @@
 <?php ?>
 
+<!-- Profile Title -->
 <div class="row">
     <div class="col-12">
-        <h1 class="mt-2 mb-4">Profile</h1>
+        <h1 class="mt-2 mb-3">Profile</h1>
     </div>
+</div>
+<!-- End Profile Title -->
 
-    <div class="col-12">
-
+<!-- Profile Data Form -->
+<div class="row mb-4">
+    <div class="col-12 col-md-2 col-sm-1"></div>
+    <div class="col-12 col-md-8 col-sm-10 text-center">
+        Form
     </div>
+    <div class="col-12 col-md-2 col-sm-1"></div>
+</div>
+<!-- End Profile Data Form -->
 
-    <div class="col-12">
-        <div class="card w-50 text-center mx-auto bg-success">
+<!-- Spotify Connect Account to Profile -->
+<div class="row">
+    <div class="col-12 col-md-2 col-sm-1"></div>
+
+    <div class="col-12 col-md-8 col-sm-10">
+        <div class="card text-center mx-auto bg-success">
             <?php
             if (isset($params['spotify_active']) && $params['spotify_active'] == true) {
-            // Connected Spotify Account
-            ?>
+                // Connected Spotify Account
+                ?>
                 <div class="card-header text-white">
                     <h3 class="my-1"><i class="fab fa-spotify"></i> Your Spotify Profile </h3>
                 </div>
@@ -52,4 +65,8 @@
         </div>
 
     </div>
+
+    <div class="col-12 col-md-2 col-sm-1"></div>
+
 </div>
+<!-- End Spotify Connect Account to Profile -->
