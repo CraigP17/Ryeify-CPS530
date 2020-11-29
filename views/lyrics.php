@@ -19,6 +19,6 @@
     <div id="result" class="container centred">
         <p>Results will be displayed here</p>
     </div>
-    <div id="more"></div>
+    <div id="more" class="container centred"></div>
 </div>
 <script src="/js/lyrics.js"></script>

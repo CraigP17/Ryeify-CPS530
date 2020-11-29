@@ -23,31 +23,43 @@ ol.songs {
     justify-content: center !important;
     align-items: center !important;
     text-align: left !important;
-    line-height: 100%
 }
 
 ol.songs li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 3px;
+    margin: 10px;
 }
 
-.more {
-    display: grid !important;
+#more {
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: left !important;
     margin-top: 1.5em;
-    overflow-x: hidden;
 }
 
 .centred{
-    display: flex;
-    justify-content: center;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
 .mb-2,
 .my-2 {
     margin-bottom: 2rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+    ol.songs{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+#result>ol>li:nth-child(n)>button{
+    margin-left: 5%;
+}
+
+#more>button:nth-child(n){
+    margin-left: 2.5%;
 }
