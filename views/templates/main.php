@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/trending.css">
+        <link rel="stylesheet" href="/css/midi.css">
         <script type="text/javascript" src="/js/main.js"></script>
 
         <!-- Bootstrap CSS -->
