@@ -150,7 +150,7 @@ class Application
 //        $SpotifyToken = $user;
         $primaryKey = $user->primaryKey();
         $primaryValue = $user->{$primaryKey};
-        $this->session->set('user', $primaryValue);
+        $_SESSION['user'] = $primaryValue;
         return true;
     }
 
