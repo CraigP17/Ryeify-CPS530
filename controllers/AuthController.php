@@ -91,7 +91,7 @@ class AuthController extends Controller
             $user_data = $this->getSpotifyProfile();
             if (isset($user_data['display_name']))
             {
-                $params['spotify_active'] = false;
+                $params['spotify_active'] = true;
                 $params['spotify_name'] = $user_data['display_name'];
                 $params['spotify_followers'] = $user_data['followers']['total'];
                 $params['spotify_product'] = ucfirst($user_data['product']);
@@ -166,7 +166,7 @@ class AuthController extends Controller
             $_SESSION['access_token_time'] = time();
             $_SESSION['refresh_token'] = $arr_response['refresh_token'];
             $_SESSION['active'] = true;
-            Application::$app->response->redirect('/spotify-connected');
+            Application::$app->response->redirect('/profile');
             return;
             // TODO: On Application check bearer token, add case of logged in user
             // TODO: On logout, remove active session and other tokens
@@ -178,7 +178,9 @@ class AuthController extends Controller
     {
         if (isset($_SESSION['active']) && isset($_SESSION['refresh_token']))
         {
-            var_dump($_SESSION['access_token']);
+            echo "Access Token: " . $_SESSION['access_token'];
+            echo "<br>";
+            echo "Refresh Token: " . $_SESSION['refresh_token'];
             return $this->render('spotify-connected');
         }
         return $this->render('error');

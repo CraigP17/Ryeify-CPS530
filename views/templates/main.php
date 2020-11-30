@@ -58,9 +58,8 @@
                             <div class="dropdown-divider"></div>
                             <!-- Use PHP to check Session or Cookie for being looged in -->
                             <!-- If logged in, display account name, else sign in button -->
-                            <?php if (Application::$app->loggedIn()) {
-                                echo "<p class='text-light'>". Application::$app->user->userName(). "</p>";
-                            ?>
+                            <?php if (Application::$app->loggedIn()) { ?>
+                                <a class="dropdown-item text-light dropdown-hover mb-2" href="/profile"> Profile </a>
                                 <a class="dropdown-item text-light dropdown-hover" href="/logout">Logout</a>
                             <?php } else {?>
                                 <a class="dropdown-item text-light dropdown-hover" href="/login">Sign In</a>
