@@ -17,7 +17,7 @@
         </div>
     </form>
     <div id="result" class="container centred">
-        <p>Results will be displayed here</p>
+        <p>The lyrics to your favorite song will be here...</p>
     </div>
     <div id="more" class="container centred"></div>
 </div>
