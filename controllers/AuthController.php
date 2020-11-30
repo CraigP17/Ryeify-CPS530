@@ -67,12 +67,12 @@ class AuthController extends Controller
 
     public function profile($request, $response)
     {
-        $loginForm = new LoginModel();
         if ($_POST)
         {
             // From Profile Data Form
-            $loginForm->loadData($request->getBody());
-            if ($loginForm->validate() && $loginForm->login())
+            $data = $request->getBody();
+            // validate data
+            if (true)
             {
                 $response->redirect('/');
                 return 0;
@@ -81,7 +81,7 @@ class AuthController extends Controller
 
         // GET request
         // return profile view
-        $_SESSION['spotify_active'] = true;
+        // $_SESSION['spotify_active'] = true;
 
         $params = array();
         $params['spotify_active'] = false;
@@ -122,11 +122,11 @@ class AuthController extends Controller
     {
         if (isset($_GET['error']) && trim($_GET['error']) == 'access_denied')
         {
-            $response->redirect('/error');
+            $response->redirect('/profile');
         }
 
         $state = $_GET['state'] ?? '';
-        if ($state != Application::$app->config['spotify_state'])
+        if ($state == "STATE")
         {
             Application::$app->response->redirect('/error');
         }
@@ -162,10 +162,16 @@ class AuthController extends Controller
         if (isset($arr_response['access_token']))
         {
             // Save access token to session
+            $user_id = $_SESSION['user'];
             $_SESSION['access_token'] = $arr_response['access_token'];
             $_SESSION['access_token_time'] = time();
             $_SESSION['refresh_token'] = $arr_response['refresh_token'];
-            $_SESSION['active'] = true;
+
+            // Save token to database
+            Application::$app->db->connectSpotify($arr_response['refresh_token'], $user_id);
+            $activated = Application::$app->db->getSpotifyConnection($user_id);
+
+            $_SESSION['spotify_active'] = $activated;
             Application::$app->response->redirect('/profile');
             return;
             // TODO: On Application check bearer token, add case of logged in user
@@ -176,14 +182,22 @@ class AuthController extends Controller
 
     public function spotifyConnected($request, $response)
     {
-        if (isset($_SESSION['active']) && isset($_SESSION['refresh_token']))
+        if (isset($_SESSION['spotify_active']) && isset($_SESSION['refresh_token']))
         {
             echo "Access Token: " . $_SESSION['access_token'];
             echo "<br>";
             echo "Refresh Token: " . $_SESSION['refresh_token'];
+            echo "<br>";
+            var_dump($_SESSION);
+            echo "<br>";
+            $activated = Application::$app->db->getSpotifyConnection($_SESSION['user']);
+            var_dump($activated['spotify_connected']);
             return $this->render('spotify-connected');
         }
-        return $this->render('error');
+        var_dump($_SESSION);
+//        Application::$app->response->redirect('/error');
+//        return 1;
+        return $this->render('spotify-connected');
     }
 
     private function getSpotifyProfile()
