@@ -27,6 +27,8 @@ $app->router->get('/lyrics', [SiteController::class, 'lyrics']);
 $app->router->get('/team', [SiteController::class, 'team']);
 $app->router->get('/about', [SiteController::class, 'about']);
 
+$app->router->get('/error', [SiteController::class, 'error']);
+
 $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->post('/contact', [SiteController::class, 'handleContact']);
 
@@ -47,5 +49,7 @@ $app->router->get('/callback', [AuthController::class, 'spotifyCallback']);
 $app->router->get('/spotify-connected', [AuthController::class, 'spotifyConnected']);
 
 $app->router->get('/personalized', [SiteController::class, 'personalized']);
+
+$app->router->get('/profile', [AuthController::class, 'profile']);
 
 $app->run();

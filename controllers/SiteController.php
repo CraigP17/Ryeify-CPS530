@@ -58,6 +58,11 @@ class SiteController extends Controller
         return $this->render('contact');
     }
 
+    public function error()
+    {
+        return $this->render('error404');
+    }
+
     public function handleContact($request)
     {
         $body = $request->getBody();
