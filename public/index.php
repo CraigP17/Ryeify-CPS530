@@ -26,6 +26,8 @@ $app->router->get('/midi', [SiteController::class, 'midi']);
 $app->router->get('/team', [SiteController::class, 'team']);
 $app->router->get('/about', [SiteController::class, 'about']);
 
+$app->router->get('/error', [SiteController::class, 'error']);
+
 $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->post('/contact', [SiteController::class, 'handleContact']);
 
