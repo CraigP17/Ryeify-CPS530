@@ -23,6 +23,7 @@ $app = new Application(dirname(__DIR__));
 
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/midi', [SiteController::class, 'midi']);
+$app->router->get('/lyrics', [SiteController::class, 'lyrics']);
 $app->router->get('/team', [SiteController::class, 'team']);
 $app->router->get('/about', [SiteController::class, 'about']);
 
@@ -40,7 +41,6 @@ $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/logout', [AuthController::class, 'logout']);
 
 $app->router->get('/trending', [TrendingController::class, 'trending']);
-
 $app->router->get('/pasthits', [TrendingController::class, 'pasthits']);
 
 // Spotify Login Routes

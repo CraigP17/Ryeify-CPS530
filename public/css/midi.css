@@ -64,6 +64,11 @@ h1 {
     margin-right: 1em;
 }
 
+.card-text, .list-group-item{
+    color: #12181c;
+
+}
+
 @media only screen and (max-width: 768px) {
     .white {
         --width: 70px;

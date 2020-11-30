@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#result>p {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: left !important;
+    margin-top: 1.5em;
+}
+
+ol.songs {
+    display: grid !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: left !important;
+}
+
+ol.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#more {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 1.5em;
+}
+
+.centred{
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.mb-2,
+.my-2 {
+    margin-bottom: 2rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+    ol.songs{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+#result>ol>li:nth-child(n)>button{
+    margin-left: 5%;
+}
+
+#more>button:nth-child(n){
+    margin-left: 2.5%;
+}

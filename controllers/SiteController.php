@@ -31,6 +31,11 @@ class SiteController extends Controller
     {
         return $this->render('midi');
     }
+    
+    public function lyrics()
+    {
+        return $this->render('lyrics');
+    }
 
     public function personalized()
     {

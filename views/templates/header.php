@@ -36,6 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="#"> Trending Songs </a>
                     </li>
+                    <li class="nav-item dropdown text-center">
+                        <a class="nav-link text-light text-center" href="#"> Lyrics </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-light text-center" href="#"> Past Hits </a>
                     </li>
