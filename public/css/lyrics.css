@@ -23,6 +23,8 @@ ol.songs {
     justify-content: center !important;
     align-items: center !important;
     text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 ol.songs li {
