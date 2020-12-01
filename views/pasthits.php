@@ -50,7 +50,7 @@
                         <div style = "padding: 0 100px" class="container">
                             <div class="row">
                                 <?php for ($x = 0; $x <= 3; $x++) { ?>
-                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2" data-aos="fade-up">
+                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2" data-aos="fade-up" data-aos-duration="1000">
                                         <?php
                                         $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
                                         $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];

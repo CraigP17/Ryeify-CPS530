@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <!-- column  -->
-        <div class="col-lg col-md mb-4" data-aos="fade-up">
+        <div class="col-lg col-md mb-4" data-aos="fade-up" data-aos-duration="1000">
             <!-- Row -->
             <div class="row">
                 <div class="col-md-12 pro-pic shadow-sm">
@@ -24,7 +24,7 @@
         </div>
         <!-- column  -->
         <!-- column  -->
-        <div class="col-lg col-md mb-4" data-aos="fade-up">
+        <div class="col-lg col-md mb-4" data-aos="fade-up" data-aos-duration="1000">
             <!-- Row -->
             <div class="row">
                 <div class="col-md-12 pro-pic shadow-sm">
@@ -43,7 +43,7 @@
         </div>
         <!-- column  -->
         <!-- column  -->
-        <div class="col-lg col-md mb-4" data-aos="fade-up">
+        <div class="col-lg col-md mb-4" data-aos="fade-up" data-aos-duration="1000">
             <!-- Row -->
             <div class="row">
                 <div class="col-md-12 pro-pic shadow-sm">
@@ -61,7 +61,7 @@
             <!-- Row -->
         </div>
         <!-- column  -->
-        <div class="col-lg col-md mb-4" data-aos="fade-up">
+        <div class="col-lg col-md mb-4" data-aos="fade-up" data-aos-duration="1000">
             <!-- Row -->
             <div class="row">
                 <div class="col-md-12 pro-pic">
