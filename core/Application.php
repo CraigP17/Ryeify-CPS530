@@ -143,14 +143,67 @@ class Application
         return false;
     }
 
+    public function getSpotifyUserToken($user_id, $token)
+    {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://accounts.spotify.com/api/token",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "grant_type=refresh_token&refresh_token=" . $token,
+            CURLOPT_HTTPHEADER => array(
+                "Authorization: Basic " . base64_encode(Application::$app->config['client_id'] . ":" .  Application::$app->config['client_secret']),
+                "Content-Type: application/x-www-form-urlencoded"
+            ),
+        ));
+
+        $spotify_response = curl_exec($curl);
+        curl_close($curl);
+
+        // Save user token to view Spotify pages
+        $array_response = json_decode($spotify_response, true);
+
+        if (isset($array_response['access_token']))
+        {
+            // Save user access token to session
+            $_SESSION['user_token'] = $array_response['access_token'];
+            $_SESSION['user_token_time'] = time();
+
+            if (isset($array_response['refresh_token']))
+            {
+                $_SESSION['refresh_token'] = $array_response['refresh_token'];
+                $this->db->updateSpotifyRefreshToken($user_id, $token);
+            }
+            return true;
+        }
+
+        // Return error for redirection
+        return false;
+    }
+
     public function login($user)
     {
         // Save user in session
         $this->user = $user;
-//        $SpotifyToken = $user;
         $primaryKey = $user->primaryKey();
         $primaryValue = $user->{$primaryKey};
         $_SESSION['user'] = $primaryValue;
+
+        // Check if user has connected Spotify and grab spotify tokens
+        $spotifyConnection = $this->db->getSpotifyConnection($primaryValue);
+        $connected = $spotifyConnection['spotify_connected'] === "1";
+        if ($connected)
+        {
+            $_SESSION['spotify_active'] = true;
+            $refresh_token = $this->db->getSpotifyRefreshToken($primaryValue);
+            $this->getSpotifyUserToken($primaryValue, $refresh_token['spotify_refresh_token']);
+        }
         return true;
     }
 

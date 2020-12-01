@@ -33,7 +33,7 @@ class AuthController extends Controller
 
         // GET request
         // return register view
-        $this->setLayout('auth');
+        // $this->setLayout('auth');
         return $this->render('register', [
             'model' => $registerModel
         ]);
@@ -47,13 +47,13 @@ class AuthController extends Controller
             $loginForm->loadData($request->getBody());
             if ($loginForm->validate() && $loginForm->login())
             {
-                $response->redirect('/');
+                $response->redirect('/profile');
                 return 0;
             }
         }
         // GET request
         // return login view
-        $this->setLayout('auth');
+        // $this->setLayout('auth');
         return $this->render('login', [
             'model' => $loginForm
         ]);
@@ -163,15 +163,15 @@ class AuthController extends Controller
         {
             // Save access token to session
             $user_id = $_SESSION['user'];
-            $_SESSION['access_token'] = $arr_response['access_token'];
-            $_SESSION['access_token_time'] = time();
+            $_SESSION['user_token'] = $arr_response['access_token'];
+            $_SESSION['user_token_time'] = time();
             $_SESSION['refresh_token'] = $arr_response['refresh_token'];
 
             // Save token to database
             Application::$app->db->connectSpotify($arr_response['refresh_token'], $user_id);
             $activated = Application::$app->db->getSpotifyConnection($user_id);
 
-            $_SESSION['spotify_active'] = $activated;
+            $_SESSION['spotify_active'] = $activated['spotify_connected'] == 1;
             Application::$app->response->redirect('/profile');
             return;
             // TODO: On Application check bearer token, add case of logged in user
@@ -217,7 +217,7 @@ class AuthController extends Controller
             CURLOPT_HTTPHEADER => array(
                 'Accept: application/json',
                 'Content-Type: application/json',
-                'Authorization: Bearer ' . $_SESSION['access_token']
+                'Authorization: Bearer ' . $_SESSION['user_token']
             ),
         ));
 

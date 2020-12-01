@@ -34,7 +34,7 @@ class Database
                         spotify_connected = 1,
                         spotify_refresh_token = :token
                     WHERE id = :id
-                    ;";
+                ;";
         $statement = $this->pdo->prepare($sql);
         $statement->bindValue(":token", $token);
         $statement->bindValue(":id", $id);
@@ -45,6 +45,23 @@ class Database
     public function getSpotifyConnection($id)
     {
         $statement = self::prepare("SELECT spotify_connected FROM users WHERE id = :id");
+        $statement->bindValue(":id", $id);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
+    public function getSpotifyRefreshToken($id)
+    {
+        $statement = self::prepare("SELECT spotify_refresh_token FROM users WHERE id = :id");
+        $statement->bindValue(":id", $id);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
+    public function updateSpotifyRefreshToken($id, $r_token)
+    {
+        $statement = self::prepare("UPDATE users SET spotify_refresh_token = :r_token WHERE id = :id");
+        $statement->bindValue(":r_token", $r_token);
         $statement->bindValue(":id", $id);
         $statement->execute();
         return $statement->fetch();
