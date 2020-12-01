@@ -17,6 +17,8 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+
+
 .text-secondary{
     color: white !important;
     opacity: 85% !important;
@@ -50,3 +52,14 @@ h2.test {
     -webkit-box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
 }
+
+.albumimg:hover {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+    /* IE6–IE9 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+

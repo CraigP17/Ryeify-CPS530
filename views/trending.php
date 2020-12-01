@@ -9,12 +9,7 @@
 
     <div class="row d-flex justify-content-center">
 
-        <!--  TESTING
-<h1><?php echo $params['songs']['items'][0]['track']['name']; ?></h1>
-<h1><?php echo $params['songs']['items'][0]['track']['album']['artists'][0]['name']; ?></h1>
-<img src="<?php echo $params['songs']['items'][0]['track']['album']['images'][0]['url']; ?>"  height="300px">
-<img src="<?php echo $params['tracks']['items'][0]['album']['images'][0]['url']; ?>"  height="300px">
--->
+
     </div>
 
     <!--<div class="container">-->
@@ -42,8 +37,9 @@
                 <?php
                     $source = $song['track']['album']['images'][0]['url'];
                     $source2 = $song['track']['preview_url'];
+                    $source3 = $song['track']['external_urls']['spotify'];
                 ?>
-                <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
+                <a href="<?= $source3 ?>"><img src="<?= $source ?>" alt="Track Album Art" class=" albumimg img-fluid rounded mb-3"></a>
                 <h5> <?= $song['track']['name'] ?> </h5>
                 <h6 class="text-secondary"> <?= $song['track']['album']['artists'][0]['name'] ?> </h6>
                 <div>
