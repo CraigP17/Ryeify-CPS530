@@ -150,19 +150,23 @@ class TrendingController extends Controller
 
         $params = array();
         $params[] = array('title' => 'Lofi Study Beats',
-                               'about' => 'This playlist offers chill study beats to relax to.',
+                          'about' => 'This playlist offers chill study beats to relax to.',
+                           'playlistlink' => 'https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS?si=xVwyMszdSw2oa1m6rTQzvg',
                            'order' => '1',
                            'songs' => $decoded);
         $params[] = array('title' => 'Deep Focus Music',
             'about' => 'This playlist offers music that allows you to deeply focus on your studies.',
+            'playlistlink' => 'https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ?si=K5aasHI8TEGdOtbWAVgLpA',
             'order' => '2',
             'songs' => $decoded1);
         $params[] = array('title' => 'All Nighter Music',
-            'about' => 'Up all night and need a little boost to keep you going? Stay focused with these electronic and trap beats! ',
+            'about' => 'Up all night and need a little boost to keep you going? Stay focused with these electronic and trap beats!',
+            'playlistlink' => 'https://open.spotify.com/playlist/37i9dQZF1DX692WcMwL2yW?si=MAnLXtqUTB6WrfByN1X1FA',
             'order' => '3',
             'songs' => $decoded2);
         $params[] = array('title' => 'Brain Food',
             'about' => 'Feed your brain with hypnotic electronic beats for studies and a relaxing time.',
+            'playlistlink' => 'https://open.spotify.com/playlist/37i9dQZF1DWXLeA8Omikj7?si=sRuJavKERWmrVsBljehY5g',
             'order' => '4',
             'songs' => $decoded3);
 

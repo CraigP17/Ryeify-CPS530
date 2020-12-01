@@ -39,7 +39,8 @@
     ?>
             <div class="row">
                 <div class="col-12 text-center mt-2 mb-3">
-                    <h2> <?= $playlist['title'] ?> </h2>
+                   <!-- <h2 style = "color: #848ccf"> <?= $playlist['title'] ?> </h2> -->
+                    <a  style = "text-decoration: none " href="<?= $playlist['playlistlink'] ?>"><h2 style = "color: #848ccf"> <?= $playlist['title'] ?> </h2></a>
                     <p><?= $playlist['about'] ?></p>
                 </div>
             </div>
@@ -53,8 +54,9 @@
                                         <?php
                                         $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
                                         $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];
+                                        $source3 = $playlist['songs']['items'][$x]['track']['external_urls']['spotify'];
                                         ?>
-                                        <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
+                                        <a href="<?= $source3 ?>"><img src="<?= $source ?>" alt="Track Album Art" class="albumimg img-fluid rounded mb-3"></a>
                                         <h5> <?= $playlist['songs']['items'][$x]['track']['name'] ?> </h5>
                                         <h6 class="text-secondary"> <?= $playlist['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
                                         <div>
@@ -77,8 +79,9 @@
                                         <?php
                                         $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
                                         $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];
+                                        $source3 = $playlist['songs']['items'][$x]['track']['external_urls']['spotify'];
                                         ?>
-                                        <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
+                                        <a href="<?= $source3 ?>"><img src="<?= $source ?>" alt="Track Album Art" class="albumimg img-fluid rounded mb-3"></a>
                                         <h5> <?= $playlist['songs']['items'][$x]['track']['name'] ?> </h5>
                                         <h6 class="text-secondary"> <?= $playlist['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
                                         <div>
@@ -90,6 +93,7 @@
                                 <?php } ?>
                             </div>
                         </div>
+
                     </div>
                     <a class="carousel-control-prev" href="<?= '#carouselExampleControls' . $playlist['order'] ?>" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
