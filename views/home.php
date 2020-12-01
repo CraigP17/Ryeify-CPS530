@@ -16,7 +16,7 @@
         <div class="text-center">
             <img src="/img/landing.png" class="img-fluid centred animate__animated animate__fadeInDown" id="dropdownimg"
                  alt="Person 3D">
-            <h1 class="my-3" id="home">Ryeify</h1>
+            <h1 class="my-3 img-fluid centred animate__animated animate__fadeInDown" id="home">Ryeify</h1>
             <h4>A new way to discover and interact with Music.</h4>
             <h4 class="mt-2 mb-3">Check out our features!</h4>
             <div id="scroll-button">
