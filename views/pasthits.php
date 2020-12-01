@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<h1 class="pt-2 pb-3">STUDY MUSIC</h1>
+<h1 class="pt-2 pb-3">Study Music</h1>
 
 <div class="row d-flex justify-content-center">
 
