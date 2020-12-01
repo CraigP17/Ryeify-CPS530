@@ -65,14 +65,14 @@
             <!-- Row -->
             <div class="row">
                 <div class="col-md-12 pro-pic">
-                    <img src="/img/woman.jpg" width="1129" alt="wrapkit"
+                    <img src="/img/homayra.jpg" width="1129" alt="wrapkit"
                         class="img-fluid rounded" />
                 </div>
                 <div class="col-md-12">
                     <div class="pt-2">
                         <h5 class="mt-4 font-weight-medium mb-0">Homayra Mussarrat</h5>
                         <h6 class="text-secondary">Front-End Developer</h6>
-                        <p>Responsible for working on the Trending and Past-Hits page using the Spoitfy API. Creating efficient techniques to retrieve JSON data to PHP and display it on the Front-End. Fixing general styling on the website.</p>
+                        <p>Responsible for working on the Trending and Study Music page using the Spoitfy API. Creating efficient techniques to retrieve JSON data to PHP and display it on the Front-End. Fixing general styling on the website.</p>
                     </div>
                 </div>
             </div>
