@@ -20,7 +20,7 @@
             <h4>A new way to discover and interact with Music.</h4>
             <h4 class="mt-2 mb-3">Check out our features!</h4>
             <div id="scroll-button">
-                <i class="fas fa-arrow-circle-down fa-3x"></i>
+                <i class="fas fa-arrow-circle-down fa-2x"></i>
             </div>
         </div>
     </div>

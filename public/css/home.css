@@ -21,11 +21,6 @@ body>div.container-fluid.text-light.main-container>div>div.text-center>img {
 img#dropdownimg {
     width: 400px;
 }
-@media screen and (max-width: 500px) {
-    img#dropdownimg {
-        width: 250px;
-    }
-}
 
 body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(n)>div>div>h5 {
     color: #12181c !important;
@@ -37,6 +32,16 @@ body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(2n)
 
 .animate__animated.animate__fadeInDown {
     --animate-duration: 1.5s;
+}
+
+#scroll-button{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    img#dropdownimg {
+        width: 250px;
+    }
 }
 
 @media (max-width: 768px) {
