@@ -5,7 +5,7 @@
 }
 
 body>div.container-fluid.text-light.main-container>div>div:nth-child(2n)>div>a>h2{
-    margin-top: 0.3em !important;
+    margin-top: 0.4em !important;
     font-weight: 700 !important;
     background: -webkit-linear-gradient(135deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%) !important;
     -webkit-background-clip: text !important;
