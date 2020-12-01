@@ -174,7 +174,6 @@ class AuthController extends Controller
             $_SESSION['spotify_active'] = $activated['spotify_connected'] == 1;
             Application::$app->response->redirect('/profile');
             return;
-            // TODO: On Application check bearer token, add case of logged in user
             // TODO: On logout, remove active session and other tokens
         }
         Application::$app->response->redirect('/error');
@@ -182,6 +181,7 @@ class AuthController extends Controller
 
     public function spotifyConnected($request, $response)
     {
+        Application::$app->checkShopifyToken();
         if (isset($_SESSION['spotify_active']) && isset($_SESSION['refresh_token']))
         {
             echo "Access Token: " . $_SESSION['access_token'];
