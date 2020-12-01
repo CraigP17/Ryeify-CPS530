@@ -47,7 +47,7 @@
                         <a class="nav-link text-light text-center" href="/lyrics"> Lyrics </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light text-center" href="/pasthits"> Past Hits </a>
+                        <a class="nav-link text-light text-center" href="/pasthits"> Study Music </a>
                     </li>
                     <li class="nav-item dropdown text-center">
                         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
