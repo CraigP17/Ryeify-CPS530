@@ -29,7 +29,7 @@
 <div id="goto" class="row mt-5 pt-5">
     <div class="col-sm">
         <div class="card">
-            <img class="card-img-top" src="/img/midi.png" alt="Card image cap">
+            <img class="card-img-top" src="/img/midi.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Midi Piano</h5>
                 <p class="card-text">Bring out your inner musician and fuel those ideas into the midi inspired piano
@@ -40,7 +40,7 @@
     </div>
     <div class="col-sm">
         <div class="card">
-            <img class="card-img-top img-fluid" src="/img/trending.png" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="/img/trending.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Trending Music</h5>
                 <p class="card-text">Want to know the latest songs that are trending around the globe? We have you covered with a bonus 30 seconds preview! All retrieved from accurate Spotify API Data</p>

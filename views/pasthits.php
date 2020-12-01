@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-12 text-center mt-2 mb-3">
                    <!-- <h2 style = "color: #848ccf"> <?= $playlist['title'] ?> </h2> -->
-                    <a  style = "text-decoration: none " href="<?= $playlist['playlistlink'] ?>"><h2 style = "color: #848ccf"> <?= $playlist['title'] ?> </h2></a>
+                    <a target="_blank" href="<?= $playlist['playlistlink'] ?>"><h2> <?= $playlist['title'] ?> </h2></a>
                     <p><?= $playlist['about'] ?></p>
                 </div>
             </div>
