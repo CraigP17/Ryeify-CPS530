@@ -18,6 +18,15 @@ body>div.container-fluid.text-light.main-container>div>div.text-center>img {
     margin-top: -25px;
 }
 
+img#dropdownimg {
+    width: 400px;
+}
+@media screen and (max-width: 500px) {
+    img#dropdownimg {
+        width: 250px;
+    }
+}
+
 body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(n)>div>div>h5 {
     color: #12181c !important;
 }
