@@ -174,7 +174,6 @@ class AuthController extends Controller
             $_SESSION['spotify_active'] = $activated['spotify_connected'] == 1;
             Application::$app->response->redirect('/profile');
             return;
-            // TODO: On logout, remove active session and other tokens
         }
         Application::$app->response->redirect('/error');
     }

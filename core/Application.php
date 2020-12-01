@@ -259,5 +259,11 @@ class Application
     {
         $this->user = null;
         $this->session->remove('user');
+        if (isset($_SESSION['spotify_active']) && $_SESSION['spotify_active'] == "1")
+        {
+            unset($_SESSION['refresh_token']);
+            unset($_SESSION['user_token']);
+            unset($_SESSION['user_token_time']);
+        }
     }
 }
