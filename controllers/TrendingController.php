@@ -79,11 +79,84 @@ class TrendingController extends Controller
        // var_dump($decoded);
        // echo "</pre>";
 
+        $curl1 = curl_init();
+
+        curl_setopt_array($curl1, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/playlists/37i9dQZF1DWZeKCadgRdKQ/tracks?limits=10',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['access_token']
+            ),
+        ));
+
+        $response = curl_exec($curl1);
+        curl_close($curl1);
+        $decoded1 = json_decode($response, true);
+
+
+
+        $curl2 = curl_init();
+
+        curl_setopt_array($curl2, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/playlists/37i9dQZF1DX692WcMwL2yW/tracks?limits=10',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['access_token']
+            ),
+        ));
+
+        $response = curl_exec($curl2);
+        curl_close($curl2);
+        $decoded2 = json_decode($response, true);
+
+        $curl3 = curl_init();
+
+        curl_setopt_array($curl3, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/playlists/37i9dQZF1DWXLeA8Omikj7/tracks?limits=10',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['access_token']
+            ),
+        ));
+
+        $response = curl_exec($curl3);
+        curl_close($curl3);
+        $decoded3 = json_decode($response, true);
+
+
 
 
 
         $params = [
-            'songs' => $decoded
+            'songs' => $decoded, //LOFI STUDY BEATS
+            'songs1' => $decoded1, //DEEP FOCUS MUSIC
+            'songs2' => $decoded2, //ALL NIGHTER MUSIC
+            'songs3' => $decoded3 // BRAIN FOOD
+
 
         ];
 
