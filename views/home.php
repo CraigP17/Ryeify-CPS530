@@ -11,18 +11,22 @@
     <div class="col-md-4 col-12"><p> <?php echo $params['songTitle']?></p></div>
 </div>-->
 
-<div class="text-center">
-    <img src="/img/landing.png" class="img-fluid centred animate__animated animate__fadeInDown" width="400"
-        alt="Person 3D">
-    <h2>A new way to discover and interact with Music.</h2>
-    <h3>Check out our features!</h3>
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25">
-            <path fill="white" fill-rule="evenodd"
-                d="M13.03 8.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.47 9.28a.75.75 0 011.06-1.06l2.97 2.97V3.75a.75.75 0 011.5 0v7.44l2.97-2.97a.75.75 0 011.06 0z">
-            </path>
-        </svg></a>
+<div class="row mt-0 pb-5">
+    <div class="col-12 px-1">
+        <div class="text-center">
+            <img src="/img/landing.png" class="img-fluid centred animate__animated animate__fadeInDown" id="dropdownimg"
+                 alt="Person 3D">
+            <h1 class="my-3" id="home">Ryeify</h1>
+            <h4>A new way to discover and interact with Music.</h4>
+            <h4 class="mt-2 mb-3">Check out our features!</h4>
+            <div id="scroll-button">
+                <i class="fas fa-arrow-circle-down fa-3x"></i>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="goto" class="row">
+
+<div id="goto" class="row mt-5 pt-5">
     <div class="col-sm">
         <div class="card">
             <img class="card-img-top" src="/img/midi.png" alt="Card image cap">
