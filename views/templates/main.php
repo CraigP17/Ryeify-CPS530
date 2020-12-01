@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/trending.css">
         <link rel="stylesheet" href="/css/midi.css">
+        <link rel="stylesheet" href="/css/studymusic.css">
+        <link rel="stylesheet" href="/css/lyrics.css">
         <script type="text/javascript" src="/js/main.js"></script>
 
         <!-- Bootstrap CSS -->

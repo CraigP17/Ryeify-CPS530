@@ -1,8 +1,5 @@
 <?php ?>
 
-<head>
-    <link rel="stylesheet" href="/css/lyrics.css">
-</head>
 <h1>Lyric Finder</h1>
 <div class="row d-flex justify-content-center">
     <form id="form">
