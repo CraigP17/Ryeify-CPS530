@@ -31,9 +31,8 @@ body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(2n)
 }
 
 .animate__animated.animate__fadeInDown {
-    --animate-duration: 1.5s;
+    --animate-duration: 2.5s;
 }
-
 #scroll-button{
     cursor: pointer;
 }

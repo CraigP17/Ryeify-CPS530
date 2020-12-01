@@ -49,3 +49,26 @@
         </div>
     </div>
 </div>
+
+<div id="goto" class="row mt-5 pt-5">
+    <div class="col-sm">
+        <div class="card">
+            <img class="card-img-top" src="/img/lyricsearch.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Lyric Search</h5>
+                <p class="card-text">Ever listen to that one song that you really like but somehow manage to forget the lyrics? We have you covered with our simple yet efficient lyric search app</p>
+                <a href="#" class="btn btn-primary">Find Lyrics</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card">
+            <img class="card-img-top img-fluid" src="/img/studymusic.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Study Music</h5>
+                <p class="card-text">Exam season can get stressful, but we have your back by curating the best spotify playlist to help you study and unwind. A 30 seconds sneak peek makes it even better</p>
+                <a href="#" class="btn btn-primary">Relax with Study Music</a>
+            </div>
+        </div>
+    </div>
+</div>
