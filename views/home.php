@@ -50,7 +50,7 @@
     </div>
 </div>
 
-<div id="goto" class="row mt-5 pt-5">
+<div id="goto" class="row mt-5 pt-5" data-aos="fade-up">
     <div class="col-sm">
         <div class="card">
             <img class="card-img-top" src="/img/lyricsearch.jpg" alt="Card image cap">
@@ -73,7 +73,7 @@
     </div>
 </div>
 
-<div id="goto" class="row mt-5 pt-5">
+<div id="goto" class="row mt-5 pt-5" data-aos="fade-up">
     <div class="col-sm">
         <div class="card">
             <img class="card-img-top" src="/img/personalized.jpg" alt="Card image cap">
