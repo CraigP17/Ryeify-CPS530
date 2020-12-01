@@ -50,13 +50,13 @@
                         <div style = "padding: 0 100px" class="container">
                             <div class="row">
                                 <?php for ($x = 0; $x <= 3; $x++) { ?>
-                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
+                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2" data-aos="fade-up" data-aos-duration="1000">
                                         <?php
                                         $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
                                         $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];
                                         $source3 = $playlist['songs']['items'][$x]['track']['external_urls']['spotify'];
                                         ?>
-                                        <a href="<?= $source3 ?>"><img src="<?= $source ?>" alt="Track Album Art" class="albumimg img-fluid rounded mb-3"></a>
+                                        <a href="<?= $source3 ?>" target="_blank"><img src="<?= $source ?>" alt="Track Album Art" class="albumimg img-fluid rounded mb-3"></a>
                                         <h5> <?= $playlist['songs']['items'][$x]['track']['name'] ?> </h5>
                                         <h6 class="text-secondary"> <?= $playlist['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
                                         <div>

@@ -33,7 +33,7 @@
     <div class="container">
         <div class="row">
             <?php foreach ($params['songs']['items'] as $song) { ?>
-            <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
+            <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2" data-aos="fade-up" data-aos-duration="1000">
                 <?php
                     $source = $song['track']['album']['images'][0]['url'];
                     $source2 = $song['track']['preview_url'];
