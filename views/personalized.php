@@ -7,7 +7,8 @@
 
 <body>
 
-    <h1 class="pt-2 pb-3 user-heading">Hello User</h1>
+    <h1 class="pt-2 pb-3 user-heading">Your Favourite Tracks</h1>
+
     <div class="container personalized-albums">
         <div class="row">
             <?php foreach($params['tracks']['items'] as $tracks) { ?>

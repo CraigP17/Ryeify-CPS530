@@ -47,9 +47,6 @@ class SiteController extends Controller
             'tracks' => $tracks,
             'artists' => $artists
         ];
-        var_dump($tracks['items'][0]['name'], $tracks['items'][0]['artists'][0]['name'], $tracks['items'][0]['album']['name']);
-        echo '<br>';
-        var_dump($artists['items'][0]['name'], $artists['items'][0]['genres']);
         return $this->render('personalized', $params);
     }
 
