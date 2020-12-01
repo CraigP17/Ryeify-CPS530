@@ -35,7 +35,11 @@
                     <div class="pt-2">
                         <h5 class="mt-4 font-weight-medium mb-0">Craig Pinto</h5>
                         <h6 class="text-secondary">Full-Stack Developer</h6>
-                        <p>Responsible for creating the MVC framework and streamlining the full-stack workflow. Setting up the Spotify API database and schematics. Fixing general bugs and errors throughout the site.</p>
+                        <p>
+                            Responsible for creating the MVC framework to streamline collaboration and the full-stack workflow.
+                            Implemented the Spotify API and OAuth2.0 authentication, as well as setting up the user login/registration
+                            process and user database. Fixing general bugs and errors throughout the site.
+                        </p>
                     </div>
                 </div>
             </div>
