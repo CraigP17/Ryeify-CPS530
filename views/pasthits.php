@@ -33,63 +33,74 @@
 <!--</div>-->
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div style = "padding: 0 100px" class="container">
-                <div class="row">
-                    <?php for ($x = 0; $x <= 3; $x++) { ?>
-                        <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
-                            <?php
-                            $source = $params['songs']['items'][$x]['track']['album']['images'][0]['url'];
-                            $source2 = $params['songs']['items'][$x]['track']['preview_url'];
-                            ?>
-                            <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
-                            <h5> <?= $params['songs']['items'][$x]['track']['name'] ?> </h5>
-                            <h6 class="text-secondary"> <?= $params['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
-                            <div>
-                                <audio controls>
-                                    <source src="<?= $source2 ?>" type="audio/mpeg">
-                                </audio>
-                            </div>
-                        </div>
-                    <?php } ?>
+    <?php
+        foreach ($params as $playlist)
+        {
+    ?>
+            <div class="row">
+                <div class="col-12 text-center mt-2 mb-3">
+                    <h2> <?= $playlist['title'] ?> </h2>
                 </div>
             </div>
-
-
-        </div>
-        <div class="carousel-item">
-            <div style = "padding: 0 100px" class="container">
-                <div class="row">
-                    <?php for ($x = 4; $x <= 7; $x++) { ?>
-                        <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
-                            <?php
-                            $source = $params['songs']['items'][$x]['track']['album']['images'][0]['url'];
-                            $source2 = $params['songs']['items'][$x]['track']['preview_url'];
-                            ?>
-                            <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
-                            <h5> <?= $params['songs']['items'][$x]['track']['name'] ?> </h5>
-                            <h6 class="text-secondary"> <?= $params['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
-                            <div>
-                                <audio controls>
-                                    <source src="<?= $source2 ?>" type="audio/mpeg">
-                                </audio>
+            <div id="<?= 'carouselExampleControls' . $playlist['order'] ?>" class="carousel slide mb-4" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div style = "padding: 0 100px" class="container">
+                            <div class="row">
+                                <?php for ($x = 0; $x <= 3; $x++) { ?>
+                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
+                                        <?php
+                                        $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
+                                        $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];
+                                        ?>
+                                        <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
+                                        <h5> <?= $playlist['songs']['items'][$x]['track']['name'] ?> </h5>
+                                        <h6 class="text-secondary"> <?= $playlist['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
+                                        <div>
+                                            <audio controls>
+                                                <source src="<?= $source2 ?>" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
-                    <?php } ?>
+
+
+                    </div>
+                    <div class="carousel-item">
+                        <div style = "padding: 0 100px" class="container">
+                            <div class="row">
+                                <?php for ($x = 4; $x <= 7; $x++) { ?>
+                                    <div class="col-md-3 col-sm-6 col-12 text-center text-dark mb-2">
+                                        <?php
+                                        $source = $playlist['songs']['items'][$x]['track']['album']['images'][0]['url'];
+                                        $source2 = $playlist['songs']['items'][$x]['track']['preview_url'];
+                                        ?>
+                                        <img src="<?= $source ?>" alt="Track Album Art" class="img-fluid rounded mb-3">
+                                        <h5> <?= $playlist['songs']['items'][$x]['track']['name'] ?> </h5>
+                                        <h6 class="text-secondary"> <?= $playlist['songs']['items'][$x]['track']['album']['artists'][0]['name'] ?> </h6>
+                                        <div>
+                                            <audio controls>
+                                                <source src="<?= $source2 ?>" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="<?= '#carouselExampleControls' . $playlist['order'] ?>" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="<?= '#carouselExampleControls' . $playlist['order'] ?>" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+            </div>
+    <?php } ?>
 
 
 

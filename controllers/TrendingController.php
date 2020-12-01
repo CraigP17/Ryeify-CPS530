@@ -148,17 +148,27 @@ class TrendingController extends Controller
         $decoded3 = json_decode($response, true);
 
 
+        $params = array();
+        $params[] = array('title' => 'Lofi Study Beats',
+                           'order' => '1',
+                           'songs' => $decoded);
+        $params[] = array('title' => 'Deep Focus Music',
+            'order' => '2',
+            'songs' => $decoded1);
+        $params[] = array('title' => 'All Nighter Music',
+            'order' => '3',
+            'songs' => $decoded2);
+        $params[] = array('title' => 'Brain Food',
+            'order' => '4',
+            'songs' => $decoded3);
 
 
-
-        $params = [
-            'songs' => $decoded, //LOFI STUDY BEATS
-            'songs1' => $decoded1, //DEEP FOCUS MUSIC
-            'songs2' => $decoded2, //ALL NIGHTER MUSIC
-            'songs3' => $decoded3 // BRAIN FOOD
-
-
-        ];
+//        $params = [
+//            'songs' => $decoded, //LOFI STUDY BEATS
+//            'songs1' => $decoded1, //DEEP FOCUS MUSIC
+//            'songs2' => $decoded2, //ALL NIGHTER MUSIC
+//            'songs3' => $decoded3 // BRAIN FOOD
+//        ];
 
         return $this->render('pasthits', $params);
     }
