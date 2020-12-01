@@ -150,15 +150,19 @@ class TrendingController extends Controller
 
         $params = array();
         $params[] = array('title' => 'Lofi Study Beats',
+                               'about' => 'This playlist offers chill study beats to relax to.',
                            'order' => '1',
                            'songs' => $decoded);
         $params[] = array('title' => 'Deep Focus Music',
+            'about' => 'This playlist offers music that allows you to deeply focus on your studies.',
             'order' => '2',
             'songs' => $decoded1);
         $params[] = array('title' => 'All Nighter Music',
+            'about' => 'Up all night and need a little boost to keep you going? Stay focused with these electronic and trap beats! ',
             'order' => '3',
             'songs' => $decoded2);
         $params[] = array('title' => 'Brain Food',
+            'about' => 'Feed your brain with hypnotic electronic beats for studies and a relaxing time.',
             'order' => '4',
             'songs' => $decoded3);
 
