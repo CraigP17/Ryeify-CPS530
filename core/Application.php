@@ -108,39 +108,39 @@ class Application
         }
 
         // SPOTIFY CONNECTED USERS TOKEN
-        $user_id = $_SESSION['user'];
-        $spotifyConnection = $this->db->getSpotifyConnection($user_id);
-
-        // DATABASE NOT CONNECTED, COMMENT OUT BELOW
-        $connected = $spotifyConnection['spotify_connected'] === "1";
-        // UNCOMMENT BELOW
-        // $connected = false;
-
-        if ($connected)
+        if (isset($_SESSION['user']))
         {
-            $_SESSION['spotify_active'] = true;
+            $user_id = $_SESSION['user'];
+            $spotifyConnection = $this->db->getSpotifyConnection($user_id);
 
-            if (isset($_SESSION['user_token']) && isset($_SESSION['user_token_time']))
+            $connected = $spotifyConnection['spotify_connected'] === "1";
+
+            if ($connected)
             {
-                // Check if token expired (60 mins)
-                $last_time = $_SESSION['user_token_time'];
-                if (time() - $last_time < 3600)
+                $_SESSION['spotify_active'] = true;
+
+                if (isset($_SESSION['user_token']) && isset($_SESSION['user_token_time']))
                 {
-                    $user_token_ready = true;
+                    // Check if token expired (60 mins)
+                    $last_time = $_SESSION['user_token_time'];
+                    if (time() - $last_time < 3600)
+                    {
+                        $user_token_ready = true;
+                    }
                 }
-            }
-            if (!$user_token_ready)
-            {
-                // Needs new user token
-                $refresh_token = $this->db->getSpotifyRefreshToken($user_id);
-                $success = $this->getSpotifyUserToken($user_id, $refresh_token['spotify_refresh_token']);
-                if (!$success)
+                if (!$user_token_ready)
                 {
-                    // Problem verifying Spotify account
-                    // Redirect to error page, with Internal Server Error 500
-                    $this->response->setStatusCode(500);
-                    $this->response->redirect('/error');
-                    return false;
+                    // Needs new user token
+                    $refresh_token = $this->db->getSpotifyRefreshToken($user_id);
+                    $success = $this->getSpotifyUserToken($user_id, $refresh_token['spotify_refresh_token']);
+                    if (!$success)
+                    {
+                        // Problem verifying Spotify account
+                        // Redirect to error page, with Internal Server Error 500
+                        $this->response->setStatusCode(500);
+                        $this->response->redirect('/error');
+                        return false;
+                    }
                 }
             }
         }
