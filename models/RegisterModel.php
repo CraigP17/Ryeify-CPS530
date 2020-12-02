@@ -8,14 +8,9 @@ use app\core\DBModel;
 
 class RegisterModel extends DBModel
 {
-    const STATUS_INACTIVE = 0;
-    const STATUS_ACTIVE = 1;
-    const STATUS_DELETED = 2;
-
     public $fname;
     public $lname;
     public $email;
-    public $status = 0;
     public $password;
     public $confirmPassword;
 
@@ -26,12 +21,11 @@ class RegisterModel extends DBModel
 
     public function attributes(): array
     {
-        return ['fname', 'lname', 'email', 'status', 'password'];
+        return ['fname', 'lname', 'email', 'password'];
     }
 
     public function register()
     {
-        $this->status = self::STATUS_ACTIVE;
         $this->password = password_hash($this->password, PASSWORD_DEFAULT);
         return $this->save();
     }
