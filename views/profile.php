@@ -3,23 +3,23 @@
 <!-- Profile Title -->
 <div class="row">
     <div class="col-12">
-        <h1 class="mt-2 mb-3">Profile</h1>
+        <h1 class="my-2">Profile</h1>
     </div>
 </div>
 <!-- End Profile Title -->
 
 <!-- Profile Data Form -->
-<div class="row mb-4">
-    <div class="col-12 col-md-2 col-sm-1"></div>
-    <div class="col-12 col-md-8 col-sm-10 text-center">
-        Form
-    </div>
-    <div class="col-12 col-md-2 col-sm-1"></div>
-</div>
+<!--<div class="row mb-4">-->
+<!--    <div class="col-12 col-md-2 col-sm-1"></div>-->
+<!--    <div class="col-12 col-md-8 col-sm-10 text-center">-->
+<!--        Form-->
+<!--    </div>-->
+<!--    <div class="col-12 col-md-2 col-sm-1"></div>-->
+<!--</div>-->
 <!-- End Profile Data Form -->
 
 <!-- Spotify Connect Account to Profile -->
-<div class="row">
+<div class="row pt-0 mt-0">
     <div class="col-12 col-md-2 col-sm-1"></div>
 
     <div class="col-12 col-md-8 col-sm-10">
@@ -32,11 +32,12 @@
                     <h3 class="my-1"><i class="fab fa-spotify"></i> Your Spotify Profile </h3>
                 </div>
                 <div class="card-body">
-                    <div class="row mx-4 px-4">
-                        <div class="col-sm-3">
-                            <img src="<?= $params['spotify_profile_img'] ?>" class="img-fluid rounded-circle mb-2">
+                    <div class="row">
+                        <div class="col-sm-1 col-12"></div>
+                        <div class="col-sm-3 col-12 text-center">
+                            <img src="<?= $params['spotify_profile_img'] ?>" class="img-fluid rounded-circle mb-3 px-auto" id="spotify-profile-pic">
                         </div>
-                        <div class="col-sm-8 text-sm-left text-center">
+                        <div class="col-sm-8 col-12 text-sm-left text-center my-auto">
                             <h2 class="card-title mb-2 pb-0">
                                 <?= $params['spotify_name'] ?>
                                 <span class="text-secondary">(<?= $params['spotify_product'] ?>)</span>
