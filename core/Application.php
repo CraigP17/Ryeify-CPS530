@@ -110,7 +110,12 @@ class Application
         // SPOTIFY CONNECTED USERS TOKEN
         $user_id = $_SESSION['user'];
         $spotifyConnection = $this->db->getSpotifyConnection($user_id);
+
+        // DATABASE NOT CONNECTED, COMMENT OUT BELOW
         $connected = $spotifyConnection['spotify_connected'] === "1";
+        // UNCOMMENT BELOW
+        // $connected = false;
+
         if ($connected)
         {
             $_SESSION['spotify_active'] = true;
