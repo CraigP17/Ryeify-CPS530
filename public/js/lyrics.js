@@ -28,6 +28,7 @@ function showData(data) {
     </ol>
   `;
 
+// Show previous and next button functionality
     if (data.prev || data.next) {
         more.innerHTML = `
       ${
@@ -46,7 +47,7 @@ function showData(data) {
     }
 }
 
-// Get prev and next songs
+// Get previous and next songs
 async function getMoreSongs(url) {
     const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
     const data = await res.json();
