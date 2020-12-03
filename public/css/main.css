@@ -56,7 +56,6 @@ h1 {
     align-items: center;
     text-align: center;
     font-weight: 600 !important;
-    margin-bottom: 1em !important;
     background: -webkit-linear-gradient(135deg, #9890e3, #b1f4cf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
