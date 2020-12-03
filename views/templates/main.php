@@ -88,7 +88,7 @@
 
     <div class="container-fluid text-light main-container">
 
-        <div class="content pt-3">
+        <div class="content pt-3 mb-0 pb-0">
             <?php if (Application::$app->session->getFlash('success')): ?>
             <div class="alert alert-success">
                 <?php echo Application::$app->session->getFlash('success') ?>
@@ -100,7 +100,7 @@
         </div>
 
         <footer class="footer">
-            <div class="row no-gutters text-center text-secondary mt-3">
+            <div class="row no-gutters text-center text-secondary pb-3 pt-0">
                 <div class="col-12">
                     <hr style="color: ghostwhite">
                 </div>
