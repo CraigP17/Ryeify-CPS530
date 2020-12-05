@@ -6,6 +6,9 @@ namespace app\core;
 
 abstract class Model
 {
+    // Model Class used for User registration
+    // Checks whether user input in registration is validated and matches defined rule (valid email, min number of char)
+
     public const RULE_REQUIRED = 'required';
     public const RULE_EMAIL = 'email';
     public const RULE_MIN = 'min';
@@ -15,6 +18,11 @@ abstract class Model
 
     public $errors = [];
 
+    /**
+     * Loads data input sent by user form, and assigns to model used for specific
+     *
+     * @param $data
+     */
     public function loadData($data)
     {
         // Taking data and assigning it to properties of the model
@@ -26,8 +34,22 @@ abstract class Model
         }
     }
 
+    /**
+     * Abstract function that each child Model must instantiate
+     * Specific which rules must be followed by the user's input from the form
+     * Model specifies which input contain which rules to be checked by $this->validate()
+     *
+     * @return mixed
+     */
     abstract public function rules();
 
+    /**
+     * Called when form is passed to validate the input sent by user
+     * Validates that each input follows the specific rule such as proper email, minimum number of characters
+     * Returns whether validation is successful
+     *
+     * @return bool
+     */
     public function validate()
     {
         foreach ($this->rules() as $attribute => $rules)
@@ -62,12 +84,18 @@ abstract class Model
                 }
                 if ($ruleName === self::RULE_UNIQUE)
                 {
-                    $className = $rule['class'];
-                    $uniqueAttribute = $rule['attribute'] ?? $attribute;
-                    $tableName = $className::tableName();
-                    $statement = \Application::$app->db->prepare("SELECT * FROM $tableName WHERE $uniqueAttribute = :attr");
+                    // Checks whether input is unique, and does not already exist in the database (email)
+                    $className = $rule['class'];                            // Rule for given class
+                    $uniqueAttribute = $rule['attribute'] ?? $attribute;    // Which attribute to check is unique
+                    $tableName = $className::tableName();                   // Table name in DB of attribute from $class
+
+                    // Execute DB call to select same attribute input
+                    $sql = "SELECT * FROM $tableName WHERE $uniqueAttribute = :attr";
+                    $statement = \Application::$app->db->prepare($sql);
                     $statement->bindValue(":attr", $value);
                     $statement->execute();
+
+                    // If record in DB exists, the input is not unique
                     $record = $statement->fetchObject();
                     if ($record)
                     {
@@ -80,6 +108,14 @@ abstract class Model
         return empty($this->errors);
     }
 
+    /**
+     * Called when a user input from form, does not pass the validate rule
+     * Adds the error associated with the rule to return which inputs failed
+     *
+     * @param $attribute
+     * @param $rule
+     * @param array $params
+     */
     private function addError($attribute, $rule, $params = [])
     {
         $message = isset($this->errorMessages()[$rule]) ? $this->errorMessages()[$rule] : '';
@@ -90,11 +126,22 @@ abstract class Model
         $this->errors[$attribute][] = $message;
     }
 
+    /**
+     * Adds error message of $attributes to user, when their input did not pass a given rule
+     *
+     * @param $attribute
+     * @param $message
+     */
     public function addPubError($attribute, $message)
     {
         $this->errors[$attribute][] = $message;
     }
 
+    /**
+     * List of error messages associated with breaking a rule
+     *
+     * @return string[]
+     */
     private function errorMessages()
     {
         return [
@@ -107,11 +154,24 @@ abstract class Model
         ];
     }
 
+    /**
+     * Returns whether the input data has an error (did not pass a rule)
+     *
+     * @param $attribute
+     * @return false|mixed
+     */
     public function hasError($attribute)
     {
         return $this->errors[$attribute] ?? false;
     }
 
+    /**
+     * Returns the first error message from user's input error messages
+     * so user can only be given one error for each input
+     *
+     * @param $attribute
+     * @return mixed|string
+     */
     public function getFirstError($attribute)
     {
         return $this->errors[$attribute][0] ?? '';
