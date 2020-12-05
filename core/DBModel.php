@@ -4,6 +4,8 @@
 namespace app\core;
 
 
+use Application;
+
 abstract class DBModel extends Model
 {
     // DBModel login class that extends Model class
@@ -36,11 +38,10 @@ abstract class DBModel extends Model
         $tablename = $this->tableName();
         $attributes = $this->attributes();
 
-//        \Application::$app->db->pdo->prepare();
-        $statement = $this->prepare("INSERT INTO $tablename (". implode(',', $attributes) . ")
-                                        VALUES(:". implode(',:', $attributes) ." )");
-
-//        var_dump($statement, $attributes);
+        $sql = "INSERT INTO $tablename 
+                    (". implode(',', $attributes) . ")
+                    VALUES(:". implode(',:', $attributes) ." )";
+        $statement = Application::$app->db->pdo->prepare($sql);
 
         foreach ($attributes as $attribute)
         {
@@ -61,9 +62,11 @@ abstract class DBModel extends Model
     {
         $tableName = static::tableName();
 
-        $statement = self::prepare("SELECT * FROM $tableName WHERE email = :email");
+        $sql = "SELECT * FROM $tableName WHERE email = :email";
+        $statement = Application::$app->db->pdo->prepare($sql);
         $statement->bindValue(":email", $where['email']);
         $statement->execute();
+
         return $statement->fetchObject(static::class);
     }
 
@@ -76,14 +79,13 @@ abstract class DBModel extends Model
     public function findUserByKey($key)
     {
         $tableName = static::tableName();
-        $statement = self::prepare("SELECT * FROM $tableName WHERE id = :id");
+
+        $sql = "SELECT * FROM $tableName WHERE id = :id";
+        $statement = Application::$app->db->pdo->prepare($sql);
         $statement->bindValue(":id", $key['id']);
         $statement->execute();
+
         return $statement->fetchObject(static::class);
     }
 
-    public static function prepare($sql)
-    {
-        return \Application::$app->db->pdo->prepare($sql);
-    }
 }
