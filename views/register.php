@@ -13,7 +13,7 @@
                         <label for="fname"></label><br>
                         <h6>First Name:</h6>
                         <input type="text" id="fname" name="fname" placeholder="first name" value="<?= $model->fname ?>"
-                            class="form-control <?= $model->hasError('fname') ? ' is-invalid': '' ?>">
+                            class="form-control <?= $model->hasError('fname') ? ' is-invalid': '' ?>" style = "border-radius: 0">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('fname') ?>
                         </div>
