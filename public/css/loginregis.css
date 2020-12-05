@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-html,body{
-    background-image: url('https://www.pexels.com/photo/close-up-photo-of-vinyl-disc-3391930/') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container{
