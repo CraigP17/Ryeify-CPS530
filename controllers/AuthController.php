@@ -105,14 +105,51 @@ class AuthController extends Controller
 
     public function personalized()
     {
-        $tracks_json = file_get_contents("../temp-json/tracks.json");
-        $tracks = json_decode($tracks_json, true);
-        $artists_json = file_get_contents("../temp-json/artists.json");
-        $artists = json_decode($artists_json, true);
-        $params = [
-            'tracks' => $tracks,
-            'artists' => $artists
-        ];
+        $params = array();
+
+        $spotify_connected = isset($_SESSION['spotify_active']);
+        $params['connected'] = $spotify_connected;
+
+        if (isset($_SESSION['user']) && $spotify_connected)
+        {
+            // User is logged in and connected their Spotify account, use their actual data
+            Application::$app->checkShopifyToken();
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://api.spotify.com/v1/me/top/tracks',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'GET',
+                CURLOPT_HTTPHEADER => array(
+                    'Accept: application/json',
+                    'Content-Type: application/json',
+                    'Authorization: Bearer ' . $_SESSION['user_token']
+                ),
+            ));
+
+            $response = curl_exec($curl);
+            curl_close($curl);
+
+            $tracks = json_decode($response, true);
+            $params['tracks'] = $tracks;
+        }
+        else
+        {
+            // Spotify Account not Account, use defaults
+            $tracks_json = file_get_contents("../temp-json/tracks.json");
+            $tracks = json_decode($tracks_json, true);
+            $artists_json = file_get_contents("../temp-json/artists.json");
+            $artists = json_decode($artists_json, true);
+            $params = [
+                'tracks' => $tracks,
+                'artists' => $artists
+            ];
+        }
         return $this->render('personalized', $params);
     }
 

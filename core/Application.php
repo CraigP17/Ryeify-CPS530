@@ -309,6 +309,7 @@ class Application
             unset($_SESSION['refresh_token']);
             unset($_SESSION['user_token']);
             unset($_SESSION['user_token_time']);
+            unset($_SESSION['spotify_active']);
         }
     }
 }
