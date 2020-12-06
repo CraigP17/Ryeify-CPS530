@@ -1,64 +1,107 @@
-<?php ?>
+<?php
+/** @var $model RegisterModel */
 
-<link rel="stylesheet" type="text/css" href="../css/loginregis.css">
+use app\models\RegisterModel;
 
+// Requires $model (RegisterModel) to be passed to view,
+// in order to verify user inputs
 
-<h1>Registration Page</h1>
-<div class="register-container">
-    <div class="d-flex justify-content-center h-100">
-        <div class="card mt-3">
+?>
+
+<!--<link rel="stylesheet" type="text/css" href="../css/loginregis.css">-->
+
+<div class="row text-dark no-gutters my-0 py-0">
+    <div class="col-12 text-center">
+        <h1 class="mb-4">Registration</h1>
+    </div>
+</div>
+
+<div class="row no-gutter text-dark">
+    <div class="col-12 col-lg-4 col-md-5 col-sm-8 mx-auto px-0">
+        <div class="card m-0">
+
+            <div class="card-header text-center p-2">
+                <h3 class="mb-0">Register</h3>
+            </div>
+
             <div class="card-body">
-                <form action="" method="post">
-                    <div class="form-group">
-                        <label for="fname"></label><br>
-                        <h6>First Name:</h6>
-                        <input type="text" id="fname" name="fname" placeholder="first name" value="<?= $model->fname ?>"
-                            class="form-control <?= $model->hasError('fname') ? ' is-invalid': '' ?>" style = "border-radius: 0">
+                <form action="/register" method="post">
+
+                    <!-- First Name -->
+                    <label for="fname">First Name:</label>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" id="fname" name="fname" placeholder="First Name"
+                               value="<?= $model->fname ?>"
+                               class="form-control <?= $model->hasError('fname') ? ' is-invalid': '' ?>"
+                               style = "border-radius: 0">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('fname') ?>
                         </div>
                     </div>
-                    <h6>Last Name:</h6>
+
+                    <!-- last Name -->
+                    <label for="lname">Last Name:</label>
                     <div class="input-group form-group">
-                        <label for="lname"></label><br>
-                        <input type="text" id="lname" name="lname" placeholder="last name" value="<?= $model->lname ?>"
-                            class="form-control <?= $model->hasError('lname') ? ' is-invalid': '' ?>">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name"
+                               value="<?= $model->lname ?>"
+                               class="form-control <?= $model->hasError('lname') ? ' is-invalid': '' ?>"
+                               style = "border-radius: 0">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('lname') ?>
                         </div>
                     </div>
 
-                    <h6>Email:</h6>
+                    <!-- Email -->
+                    <label for="email">Email: </label>
                     <div class="input-group form-group">
-                        <label for="email"></label><br>
-                        <input type="text" id="email" name="email" placeholder="email" value="<?= $model->email ?>"
-                            class="form-control <?= $model->hasError('email') ? ' is-invalid': '' ?>">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="text" id="email" name="email" placeholder="email@email.ca"
+                               value="<?= $model->email ?>"
+                               class="form-control <?= $model->hasError('email') ? ' is-invalid': '' ?>">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('email') ?>
                         </div>
                     </div>
 
-                    <h6>Password</h6>
+                    <!-- Password -->
+                    <label for="password">Password</label>
                     <div class="input-group form-group">
-                        <label for="password"></label><br>
-                        <input type="password" id="password" placeholder="password" name="password" value=""
-                            class="form-control <?= $model->hasError('password') ? ' is-invalid': '' ?>">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" id="password" placeholder="Password" name="password" value=""
+                               class="form-control <?= $model->hasError('password') ? ' is-invalid': '' ?>">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('password') ?>
                         </div>
                     </div>
 
-                    <h6>Confirm Password</h6>
+                    <!-- Confirm Password -->
+                    <label for="confirmPassword">Confirm Password</label>
                     <div class="input-group form-group">
-                        <label for="confirmPassword"></label><br>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
                         <input type="password" id="confirmPassword" placeholder="Confirm Password"
-                            name="confirmPassword" value=""
-                            class="form-control <?= $model->hasError('confirmPassword') ? ' is-invalid': '' ?>">
+                               name="confirmPassword" value=""
+                               class="form-control <?= $model->hasError('confirmPassword') ? ' is-invalid': '' ?>">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('confirmPassword') ?>
                         </div>
                     </div>
-                    <input type="submit" value="Submit" class="submit btn btn-primary float-right">
+
+                    <!-- Submit -->
+                    <div class="input-group form-group justify-content-center mb-0">
+                        <input type="submit" value="Register" class="btn btn-info">
+                    </div>
                 </form>
             </div>
         </div>
