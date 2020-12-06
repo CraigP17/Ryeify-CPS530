@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/studymusic.css">
     <link rel="stylesheet" href="/css/lyrics.css">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="shortcut icon" href="/img/favicon.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS Based Animation Library--->
