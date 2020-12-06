@@ -67,23 +67,17 @@ class AuthController extends Controller
 
     public function profile($request, $response)
     {
-        if ($_POST)
-        {
-            // From Profile Data Form
-            $data = $request->getBody();
-            // validate data
-            if (true)
-            {
-                $response->redirect('/');
-                return 0;
-            }
-        }
-
         // GET request
         // return profile view
-        // $_SESSION['spotify_active'] = true;
-
         $params = array();
+
+        // If not logged in, return to login page
+        if (!isset($_SESSION['user']))
+        {
+            $response->redirect('/login');
+            return 0;
+        }
+
         $params['spotify_active'] = false;
 
         if (isset($_SESSION['spotify_active']) && $_SESSION['spotify_active'] == true)
