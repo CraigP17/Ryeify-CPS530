@@ -107,30 +107,7 @@ class AuthController extends Controller
         if (isset($_SESSION['user']) && $spotify_connected)
         {
             // User is logged in and connected their Spotify account, use their actual data
-            Application::$app->checkShopifyToken();
-            $curl = curl_init();
-
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => 'https://api.spotify.com/v1/me/top/tracks',
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'GET',
-                CURLOPT_HTTPHEADER => array(
-                    'Accept: application/json',
-                    'Content-Type: application/json',
-                    'Authorization: Bearer ' . $_SESSION['user_token']
-                ),
-            ));
-
-            $response = curl_exec($curl);
-            curl_close($curl);
-
-            $tracks = json_decode($response, true);
-            $params['tracks'] = $tracks;
+            $params['tracks'] = $this->getTopTracks();
         }
         else
         {
@@ -144,6 +121,33 @@ class AuthController extends Controller
             $params['artists'] = $artists;
         }
         return $this->render('personalized', $params);
+    }
+
+    protected function getTopTracks()
+    {
+        Application::$app->checkShopifyToken();
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/me/top/tracks',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['user_token']
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return json_decode($response, true);
     }
 
 
