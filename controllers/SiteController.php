@@ -29,6 +29,8 @@ class SiteController extends Controller
 
     public function midi()
     {
+        // Use midi layout because it does not require the audio player stylesheet that is loaded on every page
+        $this->layout = 'midi';
         return $this->render('midi');
     }
     
