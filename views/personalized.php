@@ -9,7 +9,7 @@
             // Else display option to connect to Spotify and display our top tracks
     ?>
             <div class="col-12">
-                <h1 class="pt-2 pb-3">Personalized Favourites</h1>
+                <h1 class="pt-2 pb-3 mb-4">Personalized Favourites</h1>
             </div>
 
             <div class="col-12 col-md-2 col-sm-1"></div>
@@ -37,11 +37,11 @@
         if ($params['connected']) {
     ?>
         <div class="col-12">
-            <h1 class="pt-2 pb-3 user-heading">Your Favourite Tracks</h1>
+            <h1 class="pt-2 pb-3 user-heading mb-4">Your Favourite Tracks</h1>
         </div>
     <?php } else { ?>
         <div class="col-12">
-            <h1 class="pt-2 pb-3 user-heading">Our Favourite Tracks</h1>
+            <h1 class="pt-2 pb-3 user-heading mb-4">Our Favourite Tracks</h1>
         </div>
     <?php } ?>
 
