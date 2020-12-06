@@ -39,19 +39,6 @@ class SiteController extends Controller
         return $this->render('lyrics');
     }
 
-    public function personalized()
-    {
-        $tracks_json = file_get_contents("../temp-json/tracks.json");
-        $tracks = json_decode($tracks_json, true);
-        $artists_json = file_get_contents("../temp-json/artists.json");
-        $artists = json_decode($artists_json, true);
-        $params = [
-            'tracks' => $tracks,
-            'artists' => $artists
-        ];
-        return $this->render('personalized', $params);
-    }
-
     public function contact()
     {
         return $this->render('contact');
