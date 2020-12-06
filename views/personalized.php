@@ -16,10 +16,10 @@
             <div class="col-12 col-md-8 col-sm-10 mb-4">
                 <div class="card text-center mx-auto bg-success mt-0">
                     <div class="card-header text-dark">
-                        <h3 class="my-1"><i class="fab fa-spotify"></i> Connect your Spotify Account</h3>
+                        <h3 class="my-1 text-light"><i class="fab fa-spotify"></i> Connect your Spotify Account</h3>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-title mb-3 text-dark">
+                        <h6 class="card-title mb-3 text-light">
                             <b>You haven't connected to Spotify yet!</b>
                             Connecting your Spotify account to your Ryeify profile allows you to view your top artists
                             and tracks.
