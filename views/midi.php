@@ -1,6 +1,6 @@
 <?php ?>
 
-<h1>A Midi Inspired Piano</h1>
+<h1 class="mb-5">A Midi Inspired Piano</h1>
 <div class="row d-flex justify-content-center">
     <div class="piano" data-aos="fade-up">
         <div data-note="C" class="key white"></div>
