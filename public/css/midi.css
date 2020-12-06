@@ -45,25 +45,15 @@
     background-color: #12181c;
 }
 
-/*h1 {*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*    font-weight: 600;*/
-/*    font-size: 4em;*/
-/*    margin-bottom: 1em;*/
-/*    background: -webkit-linear-gradient(135deg, #fbc2eb, #a6c1ee);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*}*/
-
-.card{
+.card {
     border-radius: 10px;
     margin-top: 2.5em;
     margin-left: 1em;
     margin-right: 1em;
 }
 
-.card-text, .list-group-item{
+.card-text,
+.list-group-item {
     color: #12181c;
 
 }
@@ -75,5 +65,20 @@
 
     .black {
         --width: 45px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .white {
+        --width: 60px;
+    }
+
+    .black {
+        --width: 35px;
+    }
+
+    .card {
+        margin-left: 0.3em;
+        margin-right: 0.3em;
     }
 }
