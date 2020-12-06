@@ -14,29 +14,31 @@
 </div>
 
 <div id="goto" class="row mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
-    <div id="goto" class="card">
-        <div class="card-body">
-            <h4 class="card-title" style="color:#12181c !important; font-weight:600 !important">Why Ryeify?</h4>
-            <p class="card-text">• Spotify obviously rules streaming but it doesn’t let users preview anything without
-                creating an account. We break that barrier by integrating their API onto our site <br>
-                • Genius is another website that provides lyrics to users depending on song. But at times it can get
-                intimidating thus by integrating OVH API we created a simpler version in Vanilla JS <br>
-                • Bunch of online MIDI based pianos are available but they are quite non user friendly in terms of
-                styling and
-                that’s what we focused on
-            </p>
-            <a href="https://www.businessinsider.com/best-music-streaming-service-subscription" target="_blank"
-                class="btn btn-primary">Popular Music Sites</a>
+    <div class="col-md-10 col-lg-8 col-12 mx-auto">
+        <div id="goto" class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center" style="color:#12181c; font-weight:600;">Why Ryeify?</h3>
+                <p class="card-text">• Spotify obviously rules streaming but it doesn’t let users preview anything without
+                    creating an account. We break that barrier by integrating their API onto our site <br>
+                    • Genius is another website that provides lyrics to users depending on song. But at times it can get
+                    intimidating thus by integrating OVH API we created a simpler version in Vanilla JS <br>
+                    • Bunch of online MIDI based pianos are available but they are quite non user friendly in terms of
+                    styling and
+                    that’s what we focused on
+                </p>
+                <a href="https://www.businessinsider.com/best-music-streaming-service-subscription" target="_blank"
+                   class="btn btn-primary">Popular Music Sites</a>
+            </div>
         </div>
     </div>
 </div>
 
 <div id="goto" class="row mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="col-sm">
+    <div class="col-12 col-md-6">
         <div class="card">
-            <img class="card-img-top" src="/img/references.jpg" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="/img/references.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">References</h5>
+                <h4 class="card-title text-dark">References</h4>
                 <p class="card-text">This was a great learning experience for us and here are the reference links we
                     used to implement sections on our website:</p>
                 <ul class="list-group">
@@ -53,11 +55,11 @@
             </div>
         </div>
     </div>
-    <div class="col-sm">
+    <div class="col-12 col-md-6">
         <div class="card">
             <img class="card-img-top img-fluid" src="/img/credits.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Credits</h5>
+                <h4 class="card-title text-dark">Credits</h4>
                 <p class="card-text">Giving credits where it's due is a good practice to appreciate the creators of
                     wonderful open source art and technology:</p>
                 <ul class="list-group">
