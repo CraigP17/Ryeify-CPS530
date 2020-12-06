@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body>div.container-fluid.text-light.main-container>div>div:nth-child(2n)>div>a>h2{
+.study-music-album {
     margin-top: 0.4em !important;
     font-weight: 700 !important;
     background: -webkit-linear-gradient(135deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%) !important;
@@ -12,6 +12,6 @@ body>div.container-fluid.text-light.main-container>div>div:nth-child(2n)>div>a>h
     -webkit-text-fill-color: transparent !important;
 }
 
-body>div.container-fluid.text-light.main-container>div>div:nth-child(2n)>div>a{
+.study-playlist-anchor {
     text-decoration-color: #E577B4 !important;
 }

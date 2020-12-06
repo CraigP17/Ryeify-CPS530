@@ -1,9 +1,10 @@
 <?php ?>
 
-<head>
-    <link rel="stylesheet" href="/HTML5-Audio-Player-maudio/css/maudio.css">
-</head>
+<div class="row">
 
+    <div class="col-12"></div>
+
+</div>
 
 <body>
 
@@ -17,7 +18,7 @@
                 $albumCover = $tracks['album']['images'][0]['url'];
                 $preview = $tracks[0]['preview_url']; 
             ?>
-            <img src="<?= $albumCover ?>" class="img-fluid rounded mb-3">
+            <img src="<?= $albumCover ?>" class="img-fluid rounded mb-3" alt="<?= $tracks['album']['name'] ?> Album Cover">
             <h5> <?= $tracks['album']['name'] ?> </h5>
             <h6 class="text-secondary"><?= $tracks['album']['artists'][0]['name']?> </h6>
             <div>
@@ -29,10 +30,10 @@
             <?php } ?>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
-    </script>
-    <script src="HTML5-Audio-Player-maudio/js/maudio.js"></script>
-    <script src="/js/playertrending.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.min.js"-->
+<!--        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">-->
+<!--    </script>-->
+<!--    <script src="HTML5-Audio-Player-maudio/js/maudio.js"></script>-->
+<!--    <script src="/js/playertrending.js"></script>-->
     
 </body>

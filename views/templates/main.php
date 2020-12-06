@@ -17,6 +17,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Audio Player Design on Spotify Pages -->
+    <link rel="stylesheet" href="/HTML5-Audio-Player-maudio/css/maudio.css">
+
     <!-- CSS Based Animation Library--->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -136,6 +139,10 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+
+    <!-- Audio Player Design for Spotify -->
+    <script src="HTML5-Audio-Player-maudio/js/maudio.js"></script>
+    <script src="/js/playertrending.js"></script>
 </body>
 
 </html>

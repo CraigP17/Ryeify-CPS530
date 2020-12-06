@@ -1,10 +1,5 @@
 <?php ?>
 
-<head>
-    <link rel="stylesheet" href="/HTML5-Audio-Player-maudio/css/maudio.css">
-</head>
-
-<body>
 <h1 class="pt-2 pb-3">Study Music</h1>
 
 <div class="row d-flex justify-content-center">
@@ -40,7 +35,11 @@
             <div class="row">
                 <div class="col-12 text-center mt-2 mb-3">
                    <!-- <h2 style = "color: #848ccf"> <?= $playlist['title'] ?> </h2> -->
-                    <a target="_blank" href="<?= $playlist['playlistlink'] ?>"><h2> <?= $playlist['title'] ?> </h2></a>
+                    <a target="_blank" href="<?= $playlist['playlistlink'] ?>" class="study-playlist-anchor">
+                        <h2 class="study-music-album">
+                            <?= $playlist['title'] ?>
+                        </h2>
+                    </a>
                     <p><?= $playlist['about'] ?></p>
                 </div>
             </div>
@@ -106,17 +105,3 @@
                 </div>
             </div>
     <?php } ?>
-
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
-</script>
-<script src="HTML5-Audio-Player-maudio/js/maudio.js"></script>
-<script src="/js/playertrending.js"></script>
-</body>
-
-
-
-
-
