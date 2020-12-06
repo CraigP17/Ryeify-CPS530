@@ -34,7 +34,7 @@
                 <h5 class="card-title">Midi Piano</h5>
                 <p class="card-text">Bring out your inner musician and fuel those ideas into the midi inspired piano
                     which gives you a whole octave to play and experiment with ideas and notes</p>
-                <a href="#" class="btn btn-primary">Play Some Notes</a>
+                <a href="/midi" class="btn btn-primary">Play Some Notes</a>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
             <div class="card-body">
                 <h5 class="card-title">Trending Music</h5>
                 <p class="card-text">Want to know the latest songs that are trending around the globe? We have you covered with a bonus 30 seconds preview! All retrieved from accurate Spotify API Data</p>
-                <a href="#" class="btn btn-primary">Discover Trending Music</a>
+                <a href="/trending" class="btn btn-primary">Discover Trending Music</a>
             </div>
         </div>
     </div>
@@ -57,7 +57,7 @@
             <div class="card-body">
                 <h5 class="card-title">Lyric Search</h5>
                 <p class="card-text">Ever listen to that one song that you really like but somehow manage to forget the lyrics? We have you covered with our simple yet efficient lyric search app</p>
-                <a href="#" class="btn btn-primary">Find Lyrics</a>
+                <a href="/lyrics" class="btn btn-primary">Find Lyrics</a>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
             <div class="card-body">
                 <h5 class="card-title">Study Music</h5>
                 <p class="card-text">Exam season can get stressful, but we have your back by curating the best spotify playlist to help you study and unwind. A 30 seconds sneak peek makes it even better</p>
-                <a href="#" class="btn btn-primary">Relax with Study Music</a>
+                <a href="/pasthits" class="btn btn-primary">Relax with Study Music</a>
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@
             <div class="card-body">
                 <h5 class="card-title">Personalized Spotify</h5>
                 <p class="card-text">Want a more personalized feel by fetching your trends from Spotify? We have a feature just for that! Learn more by clicking the button below</p>
-                <a href="#" class="btn btn-primary">Tailor Experience</a>
+                <a href="/login" class="btn btn-primary">Tailor Experience</a>
             </div>
         </div>
     </div>
