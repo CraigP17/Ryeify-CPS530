@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-.container {
-    height: 100% !important;
-    align-content: center !important;
-}
+/*.container {*/
+/*    height: 100% !important;*/
+/*    align-content: center !important;*/
+/*}*/
 
-body>div.container-fluid.text-light.main-container>div>div>div>div {
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
+/*body>div.container-fluid.text-light.main-container>div>div>div>div {*/
+/*    height: 370px;*/
+/*    margin-top: auto;*/
+/*    margin-bottom: auto;*/
+/*    width: 400px;*/
+/*    background-color: rgba(0, 0, 0, 0.5) !important;*/
+/*}*/
 
-.card-header h3 {
-    color: #12181c;
-}
+/*.card-header h3 {*/
+/*    color: #12181c;*/
+/*}*/
 
 .social_icon {
     position: absolute;
@@ -29,17 +29,16 @@ body>div.container-fluid.text-light.main-container>div>div>div>div {
     top: -45px;
 }
 
-.input-group-prepend span {
-    width: 50px;
-    color: black;
-    border: 0 !important;
-}
+/*.input-group-prepend span {*/
+/*    width: 50px;*/
+/*    color: black;*/
+/*    border: 0 !important;*/
+/*}*/
 
-input:focus {
-    outline: 0 0 0 0 !important;
-    box-shadow: 0 0 0 0 !important;
-
-}
+/*input:focus {*/
+/*    outline: none !important;*/
+/*    box-shadow: 0 0 0 0 !important;*/
+/*}*/
 
 .remember {
     color: #12181c;
@@ -52,10 +51,10 @@ input:focus {
     margin-right: 5px;
 }
 
-.login_btn {
-    color: white !important;
-    width: 100px !important;
-}
+/*.login_btn {*/
+/*    color: white !important;*/
+/*    width: 100px !important;*/
+/*}*/
 
 .links {
     color: white;

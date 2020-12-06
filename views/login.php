@@ -1,67 +1,79 @@
 <?php
 /** @var $model LoginModel */
 
+// Uses the LoginModel to verify email and password of the user by making calls to the DB
 use app\models\LoginModel;
 
 ?>
 
-<head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<head>-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"-->
+<!--        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" type="text/css" href="../css/loginregis.css">-->
+<!--</head>-->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<div class="row text-dark no-gutters my-0 py-0">
+    <div class="col-12 text-center">
+        <h1 class="mb-4">Login</h1>
+    </div>
+</div>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/loginregis.css">
+<div class="row no-gutter text-dark">
+    <div class="col-12 col-md-5 col-sm-8 mx-auto px-0">
+        <div class="card m-0">
 
-</head>
-
-<h1>Login Page</h1>
-<div class="container">
-    <div class="d-flex justify-content-center h-100">
-        <div class="card mt-3">
-            <div class="card-header">
-                <h3>Sign In</h3>
+            <div class="card-header text-center p-2">
+                <h3 class="mb-0">Sign In</h3>
             </div>
+
             <div class="card-body">
                 <form action="/login" method="post">
+
+                    <!-- Email -->
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
                         <label for="email"></label><br>
-                        <input type="text" id="email" name="email" class="form-control" placeholder="email"
-                            value="<?= $model->email ?>"
-                            class="form-control <?= $model->hasError('email') ? ' is-invalid': '' ?>">
+                        <input type="text" id="email" name="email" placeholder="email@email.ca"
+                               value="<?= $model->email ?>"
+                               class="form-control <?= $model->hasError('email') ? ' is-invalid': '' ?>">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('email') ?>
                         </div>
                     </div>
 
+                    <!-- Password -->
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
                         <label for="password"></label><br>
-                        <input type="password" id="password" placeholder="password" name="password" value=""
-                            class="form-control <?= $model->hasError('password') ? ' is-invalid': '' ?>">
+                        <input type="password" id="password" name="password" placeholder="Password"
+                               value=""
+                               class="form-control <?= $model->hasError('password') ? ' is-invalid': '' ?>">
                         <div class="invalid-feedback">
                             <?= $model->getFirstError('password') ?>
                         </div>
                     </div>
-                    <div class="row align-items-center remember">
-                        <input type="checkbox">Remember Me
+
+                    <!-- Remember -->
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">Remember Me</label>
                     </div>
-                    <input type="submit" value="Submit" class="btn btn-primary float-right login_btn" style="color: white">
+
+                    <!-- Submit -->
+                    <div class="input-group form-group justify-content-center mb-0">
+                        <input type="submit" value="Log In" class="btn btn-info">
+                    </div>
                 </form>
             </div>
-            <div class="d-flex justify-content-center links pb-2" style="color: #12181c">
-                Don't have an account?<a href="/register">Sign Up</a>
+
+            <div class="card-footer text-dark text-center">
+                Don't have an account? <a href="/register">Sign Up</a>
             </div>
+
         </div>
     </div>
 </div>

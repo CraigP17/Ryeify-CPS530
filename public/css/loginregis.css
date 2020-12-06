@@ -1,32 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
-height: 100% !important;
-align-content: center !important;
-}
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 .card{
-width: 90vw;
-margin-top: auto;
-margin-bottom: auto;
 background-color: white !important;
 }
 
-.card-header h3{
-color: #12181c;
-}
+/*.card-header h3{*/
+/*color: #12181c;*/
+/*}*/
 
-.input-group-prepend span{
-width: 50px;
-border: 0.25rem !important;
-color: black;
-}
+/*.input-group-prepend span{*/
+/*width: 50px;*/
+/*border: 0.25rem !important;*/
+/*color: black;*/
+/*}*/
 
 .remember{
 color: #12181c;
@@ -40,14 +32,14 @@ margin-left: 15px;
 margin-right: 5px;
 }
 
-.login_btn{
-color: black;
-width: 100px;
-}
+/*.login_btn{*/
+/*color: black;*/
+/*width: 100px;*/
+/*}*/
 
-.login_btn:hover{
-color: black;
-}
+/*.login_btn:hover{*/
+/*color: black;*/
+/*}*/
 
 .links a{
 margin-left: 4px;
