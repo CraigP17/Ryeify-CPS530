@@ -22,9 +22,9 @@ img#dropdownimg {
     width: 400px;
 }
 
-body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(n)>div>div>h5 {
-    color: #12181c !important;
-}
+/*body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(n)>div>div>h5 {*/
+/*    color: #12181c !important;*/
+/*}*/
 
 body>div.container-fluid.text-light.main-container>div>div.row>div:nth-child(2n)>div>div>h5 {
     color: #12181c !important;
