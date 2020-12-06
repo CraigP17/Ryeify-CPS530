@@ -1,6 +1,6 @@
 <?php ?>
 
-<h1>Our Team</h1>
+<h1 class="mb-5">Our Team</h1>
 <div class="container">
     <div class="row">
         <!-- column  -->
