@@ -49,6 +49,7 @@ $app->router->get('/callback', [AuthController::class, 'spotifyCallback']);
 $app->router->get('/spotify-connected', [AuthController::class, 'spotifyConnected']);
 
 $app->router->get('/personalized', [AuthController::class, 'personalized']);
+$app->router->get('/recommendations', [AuthController::class, 'recommendations']);
 
 $app->router->get('/profile', [AuthController::class, 'profile']);
 

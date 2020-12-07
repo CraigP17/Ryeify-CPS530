@@ -97,7 +97,7 @@ class AuthController extends Controller
         return $this->render('profile', $params);
     }
 
-    public function personalized()
+    public function personalized($request, $response)
     {
         $params = array();
 
@@ -107,30 +107,7 @@ class AuthController extends Controller
         if (isset($_SESSION['user']) && $spotify_connected)
         {
             // User is logged in and connected their Spotify account, use their actual data
-            Application::$app->checkShopifyToken();
-            $curl = curl_init();
-
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => 'https://api.spotify.com/v1/me/top/tracks',
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'GET',
-                CURLOPT_HTTPHEADER => array(
-                    'Accept: application/json',
-                    'Content-Type: application/json',
-                    'Authorization: Bearer ' . $_SESSION['user_token']
-                ),
-            ));
-
-            $response = curl_exec($curl);
-            curl_close($curl);
-
-            $tracks = json_decode($response, true);
-            $params['tracks'] = $tracks;
+            $params['tracks'] = $this->getTopTracks();
         }
         else
         {
@@ -144,6 +121,188 @@ class AuthController extends Controller
             $params['artists'] = $artists;
         }
         return $this->render('personalized', $params);
+    }
+
+    public function recommendations($request, $response)
+    {
+        {
+            $params = array();
+
+            // Available Genres to search by on spotify
+            $avail_genres = [
+                "acoustic", "afrobeat", "alt-rock", "alternative", "ambient", "anime", "black-metal", "bluegrass",
+                "blues", "bossanova", "brazil", "breakbeat", "british", "cantopop", "chicago-house", "children", "chill",
+                "classical", "club", "comedy", "country", "dance", "dancehall", "death-metal", "deep-house", "detroit-techno",
+                "disco", "disney", "drum-and-bass", "dub", "dubstep", "edm", "electro", "electronic", "emo", "folk", "forro",
+                "french", "funk", "garage", "german", "gospel", "goth", "grindcore", "groove", "grunge", "guitar",
+                "happy", "hard-rock", "hardcore", "hardstyle", "heavy-metal", "hip-hop", "holidays", "honky-tonk", "house",
+                "idm", "indian", "indie", "indie-pop", "industrial", "iranian", "j-dance", "j-idol", "j-pop", "j-rock",
+                "jazz", "k-pop", "kids", "latin", "latino", "malay", "mandopop", "metal", "metal-misc", "metalcore",
+                "minimal-techno", "movies", "mpb", "new-age", "new-release", "opera", "pagode", "party", "philippines-opm",
+                "piano", "pop", "pop-film", "post-dubstep", "power-pop", "progressive-house", "psych-rock", "punk",
+                "punk-rock", "r-n-b", "rainy-day", "reggae", "reggaeton", "road-trip", "rock", "rock-n-roll", "rockabilly", "romance", "sad",
+                "salsa", "samba", "sertanejo", "show-tunes", "singer-songwriter", "ska", "sleep", "songwriter", "soul",
+                "soundtracks", "spanish", "study", "summer", "swedish", "synth-pop", "tango", "techno", "trance", "trip-hop",
+                "turkish", "work-out", "world-music"
+            ];
+
+            $spotify_connected = isset($_SESSION['spotify_active']);
+            $params['connected'] = $spotify_connected;
+
+            $params['music'] = array();
+
+            if (isset($_SESSION['user']) && $spotify_connected)
+            {
+                // User is logged in and connected their Spotify account, use their actual data
+
+                // Get their top artists
+                $artists = $this->getTopArtists();
+
+                // Using top tracks, create an array of their top genres and artist ids
+                $genres = array();
+                $artist_arr = array();
+
+                foreach($artists['items'] as $artist)
+                {
+                    // Save artist id and name to use for artist recommendations
+                    $artist_arr[$artist['id']] = $artist['name'];
+
+                    foreach($artist['genres'] as $genre_name)
+                    {
+                        // Filter genres to genres that is available to search by on Spotify $avail_genres
+                        $name = str_replace(' ', '-', $genre_name);
+                        if (in_array($name, $avail_genres))
+                        {
+                            // Add to array of $genres
+                            if (isset($genres[$name]))
+                            {
+                                $genres[$name] += 1;
+                            }
+                            else
+                            {
+                                $genres[$name] = 1;
+                            }
+                        }
+                    }
+                }
+
+                // Sort list of genres by values
+                arsort($genres);
+
+                // Slice array to get top 4 genres and artists
+                $genres = array_slice($genres, 0, 4);
+                $artist_arr = array_slice($artist_arr, 0 , 4);
+            }
+            else
+            {
+                // Spotify Account not Account, use defaults genres
+                $genres = array('r-n-b' => 1, 'pop' => 2, 'hip-hop' => 3, 'indie-pop' => 4);
+                $artist_arr = array('3TVXtAsR1Inumwj472S9r4' => 'Drake', '0C0XlULifJtAgn6ZNCW2eu' => 'The Killers',
+                    '0MeLMJJcouYXCymQSHPn8g' => 'Sleeping At Last');
+            }
+
+            $genre_tracks = array();
+            $artist_tracks = array();
+
+            // Get recommendations based on GENRES
+            foreach ($genres as $gen => $amount)
+            {
+                $view_name = ucwords(str_replace('-', ' ', $gen));
+                $genre_tracks[$view_name] = $this->getTrackRecommendations('seed_genres', $gen);
+            }
+            $params['music']['Genres'] = $genre_tracks;
+
+            // Get recommendations based on ARTISTS
+            foreach ($artist_arr as $art_id => $art_name)
+            {
+                $artist_tracks[$art_name] = $this->getTrackRecommendations('seed_artists', $art_id);
+            }
+            $params['music']['Artists'] = $artist_tracks;
+
+            return $this->render('recommendations', $params);
+        }
+    }
+
+    protected function getTopTracks()
+    {
+        Application::$app->checkShopifyToken();
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/me/top/tracks',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['user_token']
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return json_decode($response, true);
+    }
+
+    protected function getTopArtists()
+    {
+        Application::$app->checkShopifyToken();
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.spotify.com/v1/me/top/artists',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['user_token']
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return json_decode($response, true);
+    }
+
+    protected function getTrackRecommendations($type, $value)
+    {
+        Application::$app->checkShopifyToken();
+        $curl = curl_init();
+
+        $url = "https://api.spotify.com/v1/recommendations?" . $type . "=" . $value . "&limit=4&market=CA";
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json',
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $_SESSION['access_token']
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return json_decode($response, true);
     }
 
 
