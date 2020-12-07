@@ -21,7 +21,7 @@ class TrendingController extends Controller
     public function trending()
     {
 
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
 
         // Makes cURL request to Spotify API
         $curl = curl_init();
@@ -59,7 +59,7 @@ class TrendingController extends Controller
      */
     public function pasthits()
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
 
         // Lo-Fi Study Beats
         $curl = curl_init();

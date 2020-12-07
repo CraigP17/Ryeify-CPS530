@@ -293,7 +293,7 @@ class AuthController extends Controller
      */
     protected function getTopTracks()
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -326,7 +326,7 @@ class AuthController extends Controller
      */
     protected function getTopArtists()
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -361,7 +361,7 @@ class AuthController extends Controller
      */
     protected function getTrackRecommendations($type, $value)
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
         $curl = curl_init();
 
         $url = "https://api.spotify.com/v1/recommendations?" . $type . "=" . $value . "&limit=4&market=CA";
@@ -479,7 +479,7 @@ class AuthController extends Controller
 
     public function spotifyConnected($request, $response)
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
         if (isset($_SESSION['spotify_active']) && isset($_SESSION['refresh_token']))
         {
             echo "Access Token: " . $_SESSION['access_token'];
@@ -506,7 +506,7 @@ class AuthController extends Controller
      */
     private function getSpotifyProfile()
     {
-        Application::$app->checkShopifyToken();
+        Application::$app->checkSpotifyToken();
         $curl = curl_init();
 
         curl_setopt_array($curl, array(

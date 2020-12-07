@@ -40,7 +40,7 @@ class Application
         $this->db = new Database($this->config);
 
         // Adds Spotify client token if needed, to connect to API
-        $this->checkShopifyToken();
+        $this->checkSpotifyToken();
 
         // Get logged in user from session
         $primaryValue = $this->session->get('user');
@@ -89,7 +89,7 @@ class Application
      *
      * @return bool whether token retrieval fails, failure of retrieval redirects to /error
      */
-    public function checkShopifyToken()
+    public function checkSpotifyToken()
     {
         $access_token_ready = false;
         $user_token_ready = false;
@@ -108,7 +108,7 @@ class Application
         if (!$access_token_ready)
         {
             // Needs new access token
-            $success = $this->getShopifyBearerToken();
+            $success = $this->getSpotifyBearerToken();
             if (!$success)
             {
                 // Redirect to error page, with Internal Server Error 500
@@ -166,7 +166,7 @@ class Application
      *
      * @return bool on whether retrieving the token was successful
      */
-    protected function getShopifyBearerToken()
+    protected function getSpotifyBearerToken()
     {
         $curl = curl_init();
 
