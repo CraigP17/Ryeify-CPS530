@@ -13,6 +13,10 @@ require_once __DIR__.'/Session.php';
  */
 class Application
 {
+    // Called in index.php
+    // Sets up whole web application
+    // Calls the appropriate files to include and sets up connection to DB
+
     public static $ROOT_DIR;
 
     public $userClass;
@@ -25,6 +29,13 @@ class Application
     public $db;
     public $user;
     public $config;
+
+    /**
+     * Application constructor.
+     * Instantiates Application
+     *
+     * @param $rootPath
+     */
     function __construct($rootPath)
     {
         $this->userClass = \app\models\RegisterModel::class;
