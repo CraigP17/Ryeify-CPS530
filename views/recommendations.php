@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col-12">
-        <h1 class="pt-2">Made For You</h1>
+        <h1 class="pt-2 mb-4">Made For You</h1>
     </div>
     <?php
     if (!$params['connected'])
@@ -29,14 +29,13 @@
         </div>
         <div class="col-12 col-md-2 col-sm-1"></div>
         <div class="col-12">
-            <h1 class="pt-2">Our Favourites</h1>
+            <h1 class="pt-2 mt-3 mb-3">Our Favourites</h1>
         </div>
     <?php } ?>
 
     <!--  Buttons to Scroll to Different Sections (Genres and Artists)  -->
     <div class="col-12 text-center pb-4 mb-4">
         <h2 class="title-color">
-            Using:
             <?php foreach ($params['music'] as $type => $playlists) { ?>
                 <button type="button" class="btn btn-info" id="<?=$type?>-button">
                     <?= $type ?>
@@ -53,7 +52,7 @@
                 <div class="col-12 mt-4" id="<?=$type?>-section">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h1><?= $type ?></h1>
+                            <h1 class="mb-4"><?= $type ?></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -78,7 +77,7 @@
                                             ?>
                                             <a href="<?= $external ?>" target="_blank">
                                                 <img src="<?= $albumCover ?>"
-                                                     class="img-fluid rounded mb-3"
+                                                     class="cover-art img-fluid rounded mb-3"
                                                      alt="<?= $tracks['album']['name'] ?> Album Cover">
                                             </a>
                                             <h5>
