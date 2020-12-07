@@ -54,7 +54,7 @@
                         $albumCover = $tracks['album']['images'][0]['url'];
                         $preview = $tracks['preview_url'];
                     ?>
-                    <img src="<?= $albumCover ?>" class="cover-art img-fluid rounded mb-3" alt="<?= $tracks['album']['name'] ?> Album Cover">
+                    <img src="<?= $albumCover ?>" class="cover-art img-fluid rounded mb-3" alt="<?= $tracks['album']['name'] ?> Album Cover" style="cursor:pointer">
                     <h5> <?= $tracks['name'] ?> </h5>
                     <h6 class="text-secondary"><?= $tracks['album']['artists'][0]['name']?> </h6>
                     <div>
