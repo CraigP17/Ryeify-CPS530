@@ -50,7 +50,6 @@ $app->router->get('/profile', [AuthController::class, 'profile']);
 // Spotify Login Routes for OAuth2
 $app->router->get('/spotify-login', [AuthController::class, 'spotifyAuth']);
 $app->router->get('/callback', [AuthController::class, 'spotifyCallback']);
-$app->router->get('/spotify-connected', [AuthController::class, 'spotifyConnected']);
 
 // TrendingController
 // For trending music and study music

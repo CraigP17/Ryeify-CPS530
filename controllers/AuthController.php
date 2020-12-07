@@ -477,27 +477,6 @@ class AuthController extends Controller
         Application::$app->response->redirect('/error');
     }
 
-    public function spotifyConnected($request, $response)
-    {
-        Application::$app->checkSpotifyToken();
-        if (isset($_SESSION['spotify_active']) && isset($_SESSION['refresh_token']))
-        {
-            echo "Access Token: " . $_SESSION['access_token'];
-            echo "<br>";
-            echo "Refresh Token: " . $_SESSION['refresh_token'];
-            echo "<br>";
-            var_dump($_SESSION);
-            echo "<br>";
-            $activated = Application::$app->db->getSpotifyConnection($_SESSION['user']);
-            var_dump($activated['spotify_connected']);
-            return $this->render('spotify-connected');
-        }
-        var_dump($_SESSION);
-//        Application::$app->response->redirect('/error');
-//        return 1;
-        return $this->render('spotify-connected');
-    }
-
     /**
      * Spotify API call to get a users profile information
      * User must be logged in
