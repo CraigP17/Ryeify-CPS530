@@ -1,6 +1,6 @@
 <?php ?>
 
-<h1>Lyric Finder</h1>
+<h1 class="mb-5">Lyric Finder</h1>
 <div class="row d-flex justify-content-center">
     <form id="form">
         <div class="form-row align-items-center">
