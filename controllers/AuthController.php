@@ -10,7 +10,17 @@ use Application;
 
 class AuthController extends Controller
 {
+    // ===== AuthController is used for pages for User Login/Registration use the Spotify API on a profile =====
 
+    /**
+     * /register endpoint
+     * Handles GET and POST request
+     * GET produces the view page
+     * POST receives registration form input
+     *
+     * @param $request
+     * @return int|string|string[]
+     */
     public function register($request)
     {
         $registerModel = new RegisterModel();
@@ -39,6 +49,16 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * /login endpoint
+     * Handles GET and POST request
+     * GET produces the login view page
+     * POST receives login form input and validates
+     *
+     * @param $request
+     * @param $response
+     * @return int|string|string[]
+     */
     public function login($request, $response)
     {
         $loginForm = new LoginModel();
@@ -59,12 +79,30 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * /logout
+     * Logs out the user, calls necessary logout method to remove session
+     * Redirects to home page
+     *
+     * @param $request
+     * @param $response
+     */
     public function logout($request, $response)
     {
         Application::$app->logout();
         $response->redirect('/');
     }
 
+    /**
+     * /profile
+     * User profile page
+     * Logged in users receive their account info and spotify account
+     * Users not signed in are redirected to /login
+     *
+     * @param $request
+     * @param $response
+     * @return int|string|string[]
+     */
     public function profile($request, $response)
     {
         // GET request
@@ -97,6 +135,17 @@ class AuthController extends Controller
         return $this->render('profile', $params);
     }
 
+    /**
+     * /personalized
+     * If user is logged in and connected their profile with spotify
+     *      Get their favourite tracks using the API
+     * Else
+     *      Displays our favourite tracks from a saved json file
+     *
+     * @param $request
+     * @param $response
+     * @return string|string[]
+     */
     public function personalized($request, $response)
     {
         $params = array();
@@ -123,6 +172,19 @@ class AuthController extends Controller
         return $this->render('personalized', $params);
     }
 
+    /**
+     * /recommendations
+     *
+     * If user is logged in and connected to Spotify,
+     *      Find their favourite artists, gets their favourite genres from artists,
+     *      Then find songs using those artists and genres using Spotify API
+     * Else
+     *      Gets our favourite genres and artists, and finds recommendations based on them
+     *
+     * @param $request
+     * @param $response
+     * @return string|string[]
+     */
     public function recommendations($request, $response)
     {
         {
@@ -223,6 +285,12 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Spotify API call to get a users favourite songs
+     * User must be logged in
+     *
+     * @return mixed
+     */
     protected function getTopTracks()
     {
         Application::$app->checkShopifyToken();
@@ -250,6 +318,12 @@ class AuthController extends Controller
         return json_decode($response, true);
     }
 
+    /**
+     * Spotify API call to get a users favourite artists
+     * User must be logged in
+     *
+     * @return mixed
+     */
     protected function getTopArtists()
     {
         Application::$app->checkShopifyToken();
@@ -277,6 +351,14 @@ class AuthController extends Controller
         return json_decode($response, true);
     }
 
+    /**
+     * Spotify API call to get recommended songs based on $type:$value input (genres or artists: id)
+     * User must be logged in
+     *
+     * @param $type
+     * @param $value
+     * @return mixed
+     */
     protected function getTrackRecommendations($type, $value)
     {
         Application::$app->checkShopifyToken();
@@ -308,6 +390,14 @@ class AuthController extends Controller
 
     // ===== ===== Spotify OAuth2 ===== =====
 
+    /**
+     * Starts request to Spotify for OAuth
+     * By redirecting user to authorization on Spotify
+     *
+     * @param $request
+     * @param $response
+     * @return mixed
+     */
     public function spotifyAuth($request, $response)
     {
         $url      = "https://accounts.spotify.com/authorize";
@@ -320,6 +410,13 @@ class AuthController extends Controller
         return $response->redirect("$url?$client&$resp&$redirect&$scope&$state");
     }
 
+    /**
+     * Callback after user logs into Spotify, user is retured to /callback
+     * Requests Spotify for a user access token associated with their account
+     *
+     * @param $request
+     * @param $response
+     */
     public function spotifyCallback($request, $response)
     {
         if (isset($_GET['error']) && trim($_GET['error']) == 'access_denied')
@@ -401,6 +498,12 @@ class AuthController extends Controller
         return $this->render('spotify-connected');
     }
 
+    /**
+     * Spotify API call to get a users profile information
+     * User must be logged in
+     *
+     * @return mixed
+     */
     private function getSpotifyProfile()
     {
         Application::$app->checkShopifyToken();
