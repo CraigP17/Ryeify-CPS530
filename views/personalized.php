@@ -41,7 +41,7 @@
         </div>
     <?php } else { ?>
         <div class="col-12">
-            <h1 class="pt-2 pb-3 user-heading mb-4">Our Favourite Tracks</h1>
+            <h1 class="pt-2 pb-3 user-heading mt-4 mb-4">Our Favourite Tracks</h1>
         </div>
     <?php } ?>
 
@@ -54,7 +54,7 @@
                         $albumCover = $tracks['album']['images'][0]['url'];
                         $preview = $tracks['preview_url'];
                     ?>
-                    <img src="<?= $albumCover ?>" class="img-fluid rounded mb-3" alt="<?= $tracks['album']['name'] ?> Album Cover">
+                    <img src="<?= $albumCover ?>" class="cover-art img-fluid rounded mb-3" alt="<?= $tracks['album']['name'] ?> Album Cover">
                     <h5> <?= $tracks['name'] ?> </h5>
                     <h6 class="text-secondary"><?= $tracks['album']['artists'][0]['name']?> </h6>
                     <div>
