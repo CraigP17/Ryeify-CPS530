@@ -53,7 +53,7 @@
                 </div>
             <?php } else { ?>
                 <div class="card-header text-dark">
-                    <h3 class="my-1"><i class="fab fa-spotify"></i> Connect your Spotify Account</h3>
+                    <h3 class="my-1 text-light"><i class="fab fa-spotify text-light"></i> Connect your Spotify Account</h3>
                 </div>
                 <div class="card-body">
                     <h6 class="card-title mb-3">
