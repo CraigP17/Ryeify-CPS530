@@ -52,12 +52,12 @@ class TrendingController extends Controller
     }
 
     /**
-     * /pasthits
+     * /study-music
      * Uses the Spotify API to query songs from Study Music Playlists
      *
      * @return string|string[]
      */
-    public function pasthits()
+    public function study()
     {
         Application::$app->checkSpotifyToken();
 
@@ -145,7 +145,7 @@ class TrendingController extends Controller
         curl_close($curl3);
         $decoded3 = json_decode($response, true);
 
-        // Combine Playlist tracks to pass $params to /pasthits view
+        // Combine Playlist tracks to pass $params to /study-music view
         $params = array();
         $params[] = array('title' => 'Lofi Study Beats',
                           'about' => 'This playlist offers chill study beats to relax to.',

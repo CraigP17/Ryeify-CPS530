@@ -67,7 +67,7 @@
             <div class="card-body">
                 <h5 class="card-title">Study Music</h5>
                 <p class="card-text">Exam season can get stressful, but we have your back by curating the best spotify playlist to help you study and unwind. A 30 seconds sneak peek makes it even better</p>
-                <a href="/pasthits" class="btn btn-primary">Relax with Study Music</a>
+                <a href="/study-music" class="btn btn-primary">Relax with Study Music</a>
             </div>
         </div>
     </div>

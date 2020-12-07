@@ -11,26 +11,26 @@ require_once '../controllers/TrendingController.php';
 require_once '../models/RegisterModel.php';
 require_once '../models/LoginModel.php';
 
-//$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-//$dotenv->load();
-
 use app\controllers\AuthController;
 use app\controllers\SiteController;
 use app\controllers\TrendingController;
 
-
 $app = new Application(dirname(__DIR__));
 
+// ROUTES
+
+// Static Routes
+// SiteController
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/midi', [SiteController::class, 'midi']);
 $app->router->get('/lyrics', [SiteController::class, 'lyrics']);
 $app->router->get('/team', [SiteController::class, 'team']);
 $app->router->get('/about', [SiteController::class, 'about']);
 
+// Error page
 $app->router->get('/error', [SiteController::class, 'error']);
 
-$app->router->get('/contact', [SiteController::class, 'contact']);
-$app->router->post('/contact', [SiteController::class, 'handleContact']);
+// AuthController for login/registration and personalized spotify endpoints
 
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);
@@ -40,17 +40,21 @@ $app->router->post('/register', [AuthController::class, 'register']);
 
 $app->router->get('/logout', [AuthController::class, 'logout']);
 
-$app->router->get('/trending', [TrendingController::class, 'trending']);
-$app->router->get('/pasthits', [TrendingController::class, 'pasthits']);
+// Personalized Spotify Route
+$app->router->get('/personalized', [AuthController::class, 'personalized']);
+$app->router->get('/recommendations', [AuthController::class, 'recommendations']);
 
-// Spotify Login Routes
+// User Profile Page
+$app->router->get('/profile', [AuthController::class, 'profile']);
+
+// Spotify Login Routes for OAuth2
 $app->router->get('/spotify-login', [AuthController::class, 'spotifyAuth']);
 $app->router->get('/callback', [AuthController::class, 'spotifyCallback']);
 $app->router->get('/spotify-connected', [AuthController::class, 'spotifyConnected']);
 
-$app->router->get('/personalized', [AuthController::class, 'personalized']);
-$app->router->get('/recommendations', [AuthController::class, 'recommendations']);
-
-$app->router->get('/profile', [AuthController::class, 'profile']);
+// TrendingController
+// For trending music and study music
+$app->router->get('/trending', [TrendingController::class, 'trending']);
+$app->router->get('/study-music', [TrendingController::class, 'study']);
 
 $app->run();
