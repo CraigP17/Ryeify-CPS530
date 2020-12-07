@@ -70,4 +70,20 @@ $(document).ready(function(){
     }
 
 
+    // +=+=+=+=+ RECOMMENDED PAGE (/recommendations) jQuery functions +=+=+=+=+
+
+    // Used on recommended page, button click to scroll down smoothly to the genre section
+    $("#Genres-button").click(function() {
+        $('html').animate({
+            scrollTop: $("#Genres-section").offset().top - 70
+        }, 1000);
+    });
+
+    // Used on recommended page, button click to scroll down smoothly to the artists section
+    $("#Artists-button").click(function() {
+        $('html').animate({
+            scrollTop: $("#Artists-section").offset().top - 70
+        }, 1000);
+    });
+
 });

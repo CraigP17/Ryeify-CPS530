@@ -61,6 +61,10 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+.title-color {
+    color: #ADC9D8;
+}
+
 @media screen and (max-width: 420px) {
     h1{
         font-size: 3em !important;
