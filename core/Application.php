@@ -48,8 +48,15 @@ class Application
         $this->router = new Router($this->request, $this->response); // Uses URL path to route to specific controller
 
         // Instantiates PDO connection to DB loading configuration
-        $this->config = '';
         $this->db = new Database();
+
+        // Get Spotify config details
+        $this->config = array(
+            "client_id" => getenv("spotify_client_id"),
+            "client_secret" => getenv("spotify_client_secret"),
+            "client_redirect" => getenv("spotify_client_redirect"),
+            "client_state" => getenv("spotify_state"),
+        );
 
         // Adds Spotify client token if needed, to connect to API
         $this->checkSpotifyToken();
@@ -180,6 +187,8 @@ class Application
      */
     protected function getSpotifyBearerToken(): bool
     {
+        $spotify_client_id = getenv("spotify_client_id");
+        $spotify_client_secret = getenv("spotify_client_secret");
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -193,7 +202,7 @@ class Application
             CURLOPT_CUSTOMREQUEST => "POST",
             CURLOPT_POSTFIELDS => "grant_type=client_credentials",
             CURLOPT_HTTPHEADER => array(
-                "Authorization: Basic " . base64_encode($this->config['client_id'] . ":" .  $this->config['client_secret']),
+                "Authorization: Basic " . base64_encode($spotify_client_id . ":" . $spotify_client_secret),
                 "Content-Type: application/x-www-form-urlencoded"
             ),
         ));
