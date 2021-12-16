@@ -40,7 +40,7 @@ class LoginModel extends Model
     public function login(): bool
     {
         // Find if there is a user existing with entered email
-        $user = RegisterModel::findOneUser(['email' => $this->email]);
+        $user = (new RegisterModel)->findOneUser(['email' => $this->email]);
 
         if (!$user)
         {
