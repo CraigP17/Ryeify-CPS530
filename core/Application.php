@@ -39,7 +39,7 @@ class Application
      */
     function __construct($rootPath)
     {
-        $this->userClass = RegisterModel::class;
+        $this->userClass = (new RegisterModel);
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->request = new Request();    // Gets URL path parameters
