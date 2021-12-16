@@ -20,9 +20,9 @@ class LoginModel extends Model
      * Form contains 2 inputs: email and password. Email, check that it was entered (Required) and email format (Email)
      * Fulfils abstract method defined in Model->rules()
      *
-     * @return array[]|mixed
+     * @return array[]
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
@@ -37,7 +37,7 @@ class LoginModel extends Model
      *
      * @return bool
      */
-    public function login()
+    public function login(): bool
     {
         // Find if there is a user existing with entered email
         $user = RegisterModel::findOneUser(['email' => $this->email]);

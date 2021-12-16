@@ -33,12 +33,12 @@ abstract class DBModel extends Model
      * Used in user registration to Insert user data into the DB
      * @return bool
      */
-    public function save()
+    public function save(): bool
     {
-        $tablename = $this->tableName();
+        $tableName = $this->tableName();
         $attributes = $this->attributes();
 
-        $sql = "INSERT INTO $tablename 
+        $sql = "INSERT INTO $tableName 
                     (". implode(',', $attributes) . ")
                     VALUES(:". implode(',:', $attributes) ." )";
         $statement = Application::$app->db->pdo->prepare($sql);

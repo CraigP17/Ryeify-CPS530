@@ -87,168 +87,6 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
-            },
-            "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
-            "id": "2YOYua8FpudSEiB9s88IgQ",
-            "name": "Yung Gravy",
-            "type": "artist",
-            "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
-          }
-        ],
-        "available_markets": [
-          ""
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6xd9phTkcEIsi1JWhbxZM3"
-        },
-        "href": "https://api.spotify.com/v1/albums/6xd9phTkcEIsi1JWhbxZM3",
-        "id": "6xd9phTkcEIsi1JWhbxZM3",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27315353ebee04814bb8153aa74",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0215353ebee04814bb8153aa74",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485115353ebee04814bb8153aa74",
-            "width": 64
-          }
-        ],
-        "name": "Sensational",
-        "release_date": "2019-05-31",
-        "release_date_precision": "day",
-        "total_tracks": 13,
-        "type": "album",
-        "uri": "spotify:album:6xd9phTkcEIsi1JWhbxZM3"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
-          },
-          "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
-          "id": "2YOYua8FpudSEiB9s88IgQ",
-          "name": "Yung Gravy",
-          "type": "artist",
-          "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
-        }
-      ],
-      "available_markets": [
-        ""
-      ],
-      "disc_number": 1,
-      "duration_ms": 169600,
-      "explicit": true,
-      "external_ids": {
-        "isrc": "USUM71907205"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/3qOkkP9JLltoUvaLjEXTmW"
-      },
-      "href": "https://api.spotify.com/v1/tracks/3qOkkP9JLltoUvaLjEXTmW",
-      "id": "3qOkkP9JLltoUvaLjEXTmW",
-      "is_local": false,
-      "name": "Gravy Train",
-      "popularity": 62,
-      "preview_url": "https://p.scdn.co/mp3-preview/f6950b3c3794873e5b80f146aebfabdb47557ece?cid=33ce4de83a9f44639733663ff571d36a",
-      "track_number": 8,
-      "type": "track",
-      "uri": "spotify:track:3qOkkP9JLltoUvaLjEXTmW"
-    },
-    {
-      "album": {
-        "album_type": "COMPILATION",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
-            },
-            "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
-            "id": "15UsOTVnJzReFVN1VCnxy4",
-            "name": "XXXTENTACION",
-            "type": "artist",
-            "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
-          }
-        ],
-        "available_markets": [
-          ""
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/3vpXJ54S3MXLyzysw8qq7c"
-        },
-        "href": "https://api.spotify.com/v1/albums/3vpXJ54S3MXLyzysw8qq7c",
-        "id": "3vpXJ54S3MXLyzysw8qq7c",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735485ea186d6971e18fabcc2f",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025485ea186d6971e18fabcc2f",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515485ea186d6971e18fabcc2f",
-            "width": 64
-          }
-        ],
-        "name": "Revenge",
-        "release_date": "2017-05-16",
-        "release_date_precision": "day",
-        "total_tracks": 7,
-        "type": "album",
-        "uri": "spotify:album:3vpXJ54S3MXLyzysw8qq7c"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
-          },
-          "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
-          "id": "15UsOTVnJzReFVN1VCnxy4",
-          "name": "XXXTENTACION",
-          "type": "artist",
-          "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
-        }
-      ],
-      "available_markets": [
-        ""
-      ],
-      "disc_number": 1,
-      "duration_ms": 101851,
-      "explicit": true,
-      "external_ids": {
-        "isrc": "USUYG1142051"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/2ooF4088y5L72c4YTEJQoB"
-      },
-      "href": "https://api.spotify.com/v1/tracks/2ooF4088y5L72c4YTEJQoB",
-      "id": "2ooF4088y5L72c4YTEJQoB",
-      "is_local": false,
-      "name": "YuNg BrAtZ",
-      "popularity": 75,
-      "preview_url": "https://p.scdn.co/mp3-preview/94a43e2f573e72fb147009dff4a258fe8b7ca902?cid=33ce4de83a9f44639733663ff571d36a",
-      "track_number": 6,
-      "type": "track",
-      "uri": "spotify:track:2ooF4088y5L72c4YTEJQoB"
-    },
-    {
-      "album": {
-        "album_type": "ALBUM",
-        "artists": [
-          {
-            "external_urls": {
               "spotify": "https://open.spotify.com/artist/5CPxrqCStgt6AfI4fLiedH"
             },
             "href": "https://api.spotify.com/v1/artists/5CPxrqCStgt6AfI4fLiedH",
@@ -950,6 +788,168 @@
       "track_number": 1,
       "type": "track",
       "uri": "spotify:track:0AQfN8vkPv4cv107F3prKb"
+    },
+    {
+      "album": {
+        "album_type": "ALBUM",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
+            },
+            "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
+            "id": "2YOYua8FpudSEiB9s88IgQ",
+            "name": "Yung Gravy",
+            "type": "artist",
+            "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6xd9phTkcEIsi1JWhbxZM3"
+        },
+        "href": "https://api.spotify.com/v1/albums/6xd9phTkcEIsi1JWhbxZM3",
+        "id": "6xd9phTkcEIsi1JWhbxZM3",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27315353ebee04814bb8153aa74",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0215353ebee04814bb8153aa74",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485115353ebee04814bb8153aa74",
+            "width": 64
+          }
+        ],
+        "name": "Sensational",
+        "release_date": "2019-05-31",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "type": "album",
+        "uri": "spotify:album:6xd9phTkcEIsi1JWhbxZM3"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2YOYua8FpudSEiB9s88IgQ"
+          },
+          "href": "https://api.spotify.com/v1/artists/2YOYua8FpudSEiB9s88IgQ",
+          "id": "2YOYua8FpudSEiB9s88IgQ",
+          "name": "Yung Gravy",
+          "type": "artist",
+          "uri": "spotify:artist:2YOYua8FpudSEiB9s88IgQ"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 169600,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUM71907205"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3qOkkP9JLltoUvaLjEXTmW"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3qOkkP9JLltoUvaLjEXTmW",
+      "id": "3qOkkP9JLltoUvaLjEXTmW",
+      "is_local": false,
+      "name": "Gravy Train",
+      "popularity": 62,
+      "preview_url": "https://p.scdn.co/mp3-preview/f6950b3c3794873e5b80f146aebfabdb47557ece?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:3qOkkP9JLltoUvaLjEXTmW"
+    },
+    {
+      "album": {
+        "album_type": "COMPILATION",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+            },
+            "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+            "id": "15UsOTVnJzReFVN1VCnxy4",
+            "name": "XXXTENTACION",
+            "type": "artist",
+            "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "available_markets": [
+          ""
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3vpXJ54S3MXLyzysw8qq7c"
+        },
+        "href": "https://api.spotify.com/v1/albums/3vpXJ54S3MXLyzysw8qq7c",
+        "id": "3vpXJ54S3MXLyzysw8qq7c",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735485ea186d6971e18fabcc2f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025485ea186d6971e18fabcc2f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515485ea186d6971e18fabcc2f",
+            "width": 64
+          }
+        ],
+        "name": "Revenge",
+        "release_date": "2017-05-16",
+        "release_date_precision": "day",
+        "total_tracks": 7,
+        "type": "album",
+        "uri": "spotify:album:3vpXJ54S3MXLyzysw8qq7c"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+          },
+          "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+          "id": "15UsOTVnJzReFVN1VCnxy4",
+          "name": "XXXTENTACION",
+          "type": "artist",
+          "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+        }
+      ],
+      "available_markets": [
+        ""
+      ],
+      "disc_number": 1,
+      "duration_ms": 101851,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUYG1142051"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2ooF4088y5L72c4YTEJQoB"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2ooF4088y5L72c4YTEJQoB",
+      "id": "2ooF4088y5L72c4YTEJQoB",
+      "is_local": false,
+      "name": "YuNg BrAtZ",
+      "popularity": 75,
+      "preview_url": "https://p.scdn.co/mp3-preview/94a43e2f573e72fb147009dff4a258fe8b7ca902?cid=33ce4de83a9f44639733663ff571d36a",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:2ooF4088y5L72c4YTEJQoB"
     }
   ],
   "total": 50,

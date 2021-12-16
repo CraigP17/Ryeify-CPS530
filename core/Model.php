@@ -116,9 +116,9 @@ abstract class Model
      * @param $rule
      * @param array $params
      */
-    private function addError($attribute, $rule, $params = [])
+    private function addError($attribute, $rule, array $params = [])
     {
-        $message = isset($this->errorMessages()[$rule]) ? $this->errorMessages()[$rule] : '';
+        $message = $this->errorMessages()[$rule] ?? '';
         foreach ($params as $key => $value)
         {
             $message = str_replace("{{$key}}", $value, $message);
@@ -142,7 +142,7 @@ abstract class Model
      *
      * @return string[]
      */
-    private function errorMessages()
+    private function errorMessages(): array
     {
         return [
             self::RULE_REQUIRED => 'This field is required.',

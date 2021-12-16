@@ -58,7 +58,7 @@
                     <div class="pt-2">
                         <h5 class="mt-4 font-weight-medium mb-0">Manpreet Rajpal</h5>
                         <h6 class="text-secondary">Full-Stack Developer</h6>
-                        <p>Worked on the back-end of the site and integrating the authentication procedure for the Personalized Spotify Page. Working on creating general styles and properties throughout the page. Integrating back-end data to the front-end and streamlining.</p>
+                        <p>Working on creating general styles and properties throughout the page. Integrating back-end data to the front-end and streamlining.</p>
                     </div>
                 </div>
             </div>

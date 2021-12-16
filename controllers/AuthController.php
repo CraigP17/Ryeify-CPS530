@@ -401,7 +401,7 @@ class AuthController extends Controller
         $resp     = "response_type=code";
         $redirect = "redirect_uri=" . Application::$app->config['client_redirect'];
         $scope    = "scope=user-read-private%20user-read-email%20user-top-read";
-        $state    = "state=" . Application::$app->config['client_redirect'];;
+        $state    = "state=" . Application::$app->config['client_redirect'];
 
         return $response->redirect("$url?$client&$resp&$redirect&$scope&$state");
     }

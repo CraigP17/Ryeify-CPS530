@@ -5,6 +5,7 @@ namespace app\core;
 
 
 use PDO;
+use PDOStatement;
 
 class Database
 {
@@ -17,7 +18,6 @@ class Database
      * Database constructor.
      * Connected to the database using the given input
      *
-     * @param $config
      */
     public function __construct()
     {
@@ -37,7 +37,7 @@ class Database
      * HELPER to simplify code
      *
      * @param $sql
-     * @return bool|\PDOStatement
+     * @return bool|PDOStatement
      */
     public function prepare($sql)
     {
@@ -50,7 +50,7 @@ class Database
      *
      * @param $token
      * @param $id
-     * @return bool|\PDOStatement
+     * @return bool|PDOStatement
      */
     public function connectSpotify($token, $id)
     {

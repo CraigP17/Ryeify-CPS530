@@ -58,7 +58,7 @@ class Router
     {
         $path = $this->request->getPath();
         $method = $this->request->method();
-        $callback = isset($this->routes[$method][$path]) ? $this->routes[$method][$path] : false;
+        $callback = $this->routes[$method][$path] ?? false;
         if ($callback === false)
         {
             Application::$app->response->setStatusCode(404);
@@ -86,7 +86,7 @@ class Router
      * @param array $params
      * @return string|string[]
      */
-    public function renderView($view, $params = [])
+    public function renderView($view, array $params = [])
     {
         $layoutContent = $this->layoutContent();                // Sets which layout file to use (default is main.php)
         $viewContent = $this->renderOnlyView($view, $params);   // Evaluates $params in the $view php file

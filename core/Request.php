@@ -12,7 +12,7 @@ class Request
      */
     public function getPath()
     {
-        $path = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+        $path = $_SERVER['REQUEST_URI'] ?? '/';
 
         // Returns only the path, and not any query parameters in the url
         $position = strpos($path, '?');
@@ -20,8 +20,7 @@ class Request
         {
             return $path;
         }
-        $path = substr($path, 0, $position);
-        return $path;
+        return substr($path, 0, $position);
     }
 
     /**
@@ -30,7 +29,7 @@ class Request
      *
      * @return string
      */
-    public function method()
+    public function method(): string
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
@@ -41,7 +40,7 @@ class Request
      *
      * @return array
      */
-    public function getBody()
+    public function getBody(): array
     {
         // This sanitizes the data
         $body = [];

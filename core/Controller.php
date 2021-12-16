@@ -31,7 +31,7 @@ class Controller
      * @param array $params
      * @return string|string[]
      */
-    public function render($view, $params = [])
+    public function render($view, array $params = [])
     {
         return Application::$app->router->renderView($view, $params);
     }
