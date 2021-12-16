@@ -121,7 +121,7 @@ class Router
     {
         $layout = Application::$app->controller->layout;
         ob_start();
-        include_once Application::$ROOT_DIR."/views/templates/$layout.php";
+        include_once "../views/templates/$layout.php";
         return ob_get_clean();
     }
 
@@ -139,7 +139,7 @@ class Router
             $$key = $value;     // Will be evaluated as key variable outside of params
         }
         ob_start();
-        include_once Application::$ROOT_DIR."/views/$view.php";
+        include_once "../views/$view.php";
         return ob_get_clean();
     }
 }

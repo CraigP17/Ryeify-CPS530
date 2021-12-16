@@ -4,10 +4,10 @@ use app\core\Database;
 use app\core\Session;
 use app\models\RegisterModel;
 
-require_once __DIR__.'/Router.php';
-require_once __DIR__.'/Request.php';
-require_once __DIR__.'/Response.php';
-require_once __DIR__.'/Session.php';
+require_once 'Router.php';
+require_once 'Request.php';
+require_once 'Response.php';
+require_once 'Session.php';
 
 /**
  * 
