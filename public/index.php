@@ -14,7 +14,7 @@ require_once '../models/LoginModel.php';
 use app\controllers\AuthController;
 use app\controllers\SiteController;
 use app\controllers\TrendingController;
-
+echo 'Testing';
 $app = new Application(dirname(__DIR__));
 
 // ROUTES
