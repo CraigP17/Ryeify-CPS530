@@ -19,14 +19,15 @@ class Database
      *
      * @param $config
      */
-    public function __construct($config)
+    public function __construct()
     {
-        $db_name = $config['dsn'] ?? '';
-        $user = $config['user'] ?? '';
-        $password = $config['password'] ?? '';
+        $cleardb_url      = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $cleardb_server   = $cleardb_url["host"];
+        $cleardb_username = $cleardb_url["user"];
+        $cleardb_password = $cleardb_url["pass"];
+        $cleardb_db       = substr($cleardb_url["path"],1);
 
-        $this->pdo = new PDO($db_name, $user, $password);
-
+        $this->pdo = new PDO("mysql:host=".$cleardb_server.";dbname=".$cleardb_db, $cleardb_username, $cleardb_password);
         // Throws an exception when error occurs
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

@@ -2,6 +2,7 @@
 
 use app\core\Database;
 use app\core\Session;
+use app\models\RegisterModel;
 
 require_once __DIR__.'/Router.php';
 require_once __DIR__.'/Request.php';
@@ -38,7 +39,7 @@ class Application
      */
     function __construct($rootPath)
     {
-        $this->userClass = \app\models\RegisterModel::class;
+        $this->userClass = RegisterModel::class;
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->request = new Request();    // Gets URL path parameters
@@ -47,8 +48,8 @@ class Application
         $this->router = new Router($this->request, $this->response); // Uses URL path to route to specific controller
 
         // Instantiates PDO connection to DB loading configuration
-        $this->config = parse_ini_file('../private/config.ini');;
-        $this->db = new Database($this->config);
+        $this->config = '';
+        $this->db = new Database();
 
         // Adds Spotify client token if needed, to connect to API
         $this->checkSpotifyToken();
@@ -100,7 +101,7 @@ class Application
      *
      * @return bool whether token retrieval fails, failure of retrieval redirects to /error
      */
-    public function checkSpotifyToken()
+    public function checkSpotifyToken(): bool
     {
         $access_token_ready = false;
         $user_token_ready = false;
@@ -177,7 +178,7 @@ class Application
      *
      * @return bool on whether retrieving the token was successful
      */
-    protected function getSpotifyBearerToken()
+    protected function getSpotifyBearerToken(): bool
     {
         $curl = curl_init();
 
@@ -223,7 +224,7 @@ class Application
      * @param $token    // users refresh token pulled from db
      * @return bool     // successful token response from Spotify
      */
-    public function getSpotifyUserToken($user_id, $token)
+    public function getSpotifyUserToken($user_id, $token): bool
     {
         $curl = curl_init();
 
@@ -273,7 +274,7 @@ class Application
      * @param $user     // Users id in db
      * @return bool
      */
-    public function login($user)
+    public function login($user): bool
     {
         // Save user in session
         $this->user = $user;
@@ -298,7 +299,7 @@ class Application
      *
      * @return bool
      */
-    public function loggedIn()
+    public function loggedIn(): bool
     {
         if ($this->user != null)
         {
