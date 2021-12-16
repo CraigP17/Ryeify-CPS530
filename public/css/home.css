@@ -3,7 +3,7 @@
 }
 
 .text-black {
-    color: black;
+    color: black !important;
 }
 
 body>div.container-fluid.text-light.main-container>div>div>h2 {
