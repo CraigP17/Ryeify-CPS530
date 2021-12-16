@@ -1,0 +1,15 @@
+ErrorDocument 400 https://ryeify.herokuapp.com/error
+ErrorDocument 401 https://ryeify.herokuapp.com/error
+ErrorDocument 403 https://ryeify.herokuapp.com/error
+ErrorDocument 404 https://ryeify.herokuapp.com/error
+ErrorDocument 500 https://ryeify.herokuapp.com/error
+ErrorDocument 502 https://ryeify.herokuapp.com/error
+ErrorDocument 504 https://ryeify.herokuapp.com/error
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php
