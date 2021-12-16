@@ -65,8 +65,8 @@ class Application
         $primaryValue = $this->session->get('user');
         if ($primaryValue)
         {
-            $primaryKey = $this->userClass::primaryKey();
-            $this->user = $this->userClass::findUserByKey([$primaryKey => $primaryValue]);
+            $primaryKey = $this->userClass->primaryKey();
+            $this->user = $this->userClass->findUserByKey([$primaryKey => $primaryValue]);
             // Later change to this and get rid of getting userClass from string in config
             // \app\models\RegisterModel::findOne([$primaryKey => $primaryValue]);
         }

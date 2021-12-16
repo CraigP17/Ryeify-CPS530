@@ -45,7 +45,7 @@ class RegisterModel extends DBModel
      *
      * @return bool
      */
-    public function register()
+    public function register(): bool
     {
         $this->password = password_hash($this->password, PASSWORD_DEFAULT);
         return $this->save();
@@ -56,9 +56,9 @@ class RegisterModel extends DBModel
      * Form contains 5 inputs. email: check it was entered (Required), email format (Email) and is unique (UNIQUE)
      * Fulfils abstract method defined in Model->rules()
      *
-     * @return array[]|mixed
+     * @return array[]
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'fname' => [self::RULE_REQUIRED],
@@ -85,7 +85,7 @@ class RegisterModel extends DBModel
      *
      * @return string
      */
-    public function userName()
+    public function userName(): string
     {
         return $this->fname . ' ' . $this->lname;
     }
