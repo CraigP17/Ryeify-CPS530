@@ -37,6 +37,16 @@
 
 <body>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKZGDH3QSL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TKZGDH3QSL');
+    </script>
+
     <nav class="site-header navbar navbar-expand-lg sticky-top navbar-dark nav-color">
         <a class="navbar-brand" href="/">
             <img src="/img/ryeify-logo.png" width="130px" height="35.6px" alt="Ryeify Logo">

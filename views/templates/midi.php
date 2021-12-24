@@ -33,107 +33,117 @@
 
 <body>
 
-<nav class="site-header navbar navbar-expand-lg sticky-top navbar-dark nav-color">
-    <a class="navbar-brand" href="/">
-        <img src="/img/ryeify-logo.png" width="130px" height="35.6px" alt="Ryeify Logo">
-    </a>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKZGDH3QSL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <!-- Responsive Nav Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        gtag('config', 'G-TKZGDH3QSL');
+    </script>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/"> Home </a>
-            </li>
-            <li class="nav-item dropdown text-center">
-                <a class="nav-link text-light text-center" href="/midi"> Midi </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/trending"> Trending Songs </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/lyrics"> Lyrics </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/study-music"> Study Music </a>
-            </li>
-            <li class="nav-item dropdown text-center">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Personalized Spotify
-                </a>
-                <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown" id="dropdown-color">
-                    <a class="dropdown-item text-light dropdown-hover" href="/personalized"> Personalized </a>
-                    <a class="dropdown-item text-light dropdown-hover" href="/recommendations"> Recommendations </a>
-                    <div class="dropdown-divider"></div>
-                    <!-- Use PHP to check Session or Cookie for being looged in -->
-                    <!-- If logged in, display account name, else sign in button -->
-                    <?php if (Application::$app->loggedIn()) { ?>
-                        <a class="dropdown-item text-light dropdown-hover mb-2" href="/profile"> Profile </a>
-                        <a class="dropdown-item text-light dropdown-hover" href="/logout">Logout</a>
-                    <?php } else {?>
-                        <a class="dropdown-item text-light dropdown-hover" href="/login">Sign In</a>
-                    <?php } ?>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/team"> Team </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light text-center" href="/about"> About </a>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <nav class="site-header navbar navbar-expand-lg sticky-top navbar-dark nav-color">
+        <a class="navbar-brand" href="/">
+            <img src="/img/ryeify-logo.png" width="130px" height="35.6px" alt="Ryeify Logo">
+        </a>
 
-<div class="container-fluid text-light main-container">
+        <!-- Responsive Nav Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="content pt-3 mb-0 pb-0">
-        <?php if (Application::$app->session->getFlash('success')): ?>
-            <div class="alert alert-success">
-                <?php echo Application::$app->session->getFlash('success') ?>
-            </div>
-        <?php endif; ?>
-
-        {{content}}
-
-    </div>
-
-    <footer class="footer">
-        <div class="row no-gutters text-center text-secondary pb-3 pt-0">
-            <div class="col-12">
-                <hr style="color: ghostwhite">
-            </div>
-            <div class="col-12 d-none d-md-block">
-                <p class="mb-0">&#169; 2020 RYEIFY. Made for CPS530 at Ryerson University.</p>
-            </div>
-            <div class="col-md-6 d-block d-md-none text-center">
-                <p class="mb-0">&#169; 2020 RYEIFY.</p>
-            </div>
-            <div class="col-md-6 d-block d-md-none text-center">
-                <p class="pl-md-1"> Made for CPS530 at Ryerson University.</p>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/"> Home </a>
+                </li>
+                <li class="nav-item dropdown text-center">
+                    <a class="nav-link text-light text-center" href="/midi"> Midi </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/trending"> Trending Songs </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/lyrics"> Lyrics </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/study-music"> Study Music </a>
+                </li>
+                <li class="nav-item dropdown text-center">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalized Spotify
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown" id="dropdown-color">
+                        <a class="dropdown-item text-light dropdown-hover" href="/personalized"> Personalized </a>
+                        <a class="dropdown-item text-light dropdown-hover" href="/recommendations"> Recommendations </a>
+                        <div class="dropdown-divider"></div>
+                        <!-- Use PHP to check Session or Cookie for being looged in -->
+                        <!-- If logged in, display account name, else sign in button -->
+                        <?php if (Application::$app->loggedIn()) { ?>
+                            <a class="dropdown-item text-light dropdown-hover mb-2" href="/profile"> Profile </a>
+                            <a class="dropdown-item text-light dropdown-hover" href="/logout">Logout</a>
+                        <?php } else {?>
+                            <a class="dropdown-item text-light dropdown-hover" href="/login">Sign In</a>
+                        <?php } ?>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/team"> Team </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light text-center" href="/about"> About </a>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </nav>
 
-</div>
+    <div class="container-fluid text-light main-container">
+
+        <div class="content pt-3 mb-0 pb-0">
+            <?php if (Application::$app->session->getFlash('success')): ?>
+                <div class="alert alert-success">
+                    <?php echo Application::$app->session->getFlash('success') ?>
+                </div>
+            <?php endif; ?>
+
+            {{content}}
+
+        </div>
+
+        <footer class="footer">
+            <div class="row no-gutters text-center text-secondary pb-3 pt-0">
+                <div class="col-12">
+                    <hr style="color: ghostwhite">
+                </div>
+                <div class="col-12 d-none d-md-block">
+                    <p class="mb-0">&#169; 2020 RYEIFY. Made for CPS530 at Ryerson University.</p>
+                </div>
+                <div class="col-md-6 d-block d-md-none text-center">
+                    <p class="mb-0">&#169; 2020 RYEIFY.</p>
+                </div>
+                <div class="col-md-6 d-block d-md-none text-center">
+                    <p class="pl-md-1"> Made for CPS530 at Ryerson University.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
 </body>
 
