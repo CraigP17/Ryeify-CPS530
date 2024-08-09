@@ -21,13 +21,13 @@ class Database
      */
     public function __construct()
     {
-        $cleardb_url      = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $cleardb_server   = $cleardb_url["host"];
-        $cleardb_username = $cleardb_url["user"];
-        $cleardb_password = $cleardb_url["pass"];
-        $cleardb_db       = substr($cleardb_url["path"],1);
+        $db_url      = parse_ini_file("../private/config.ini");
+        $db_server   = $db_url["db_server"];
+        $db_username = $db_url["db_user"];
+        $db_password = $db_url["db_password"];
+        $db_db       = $db_url["db_name"];
 
-        $this->pdo = new PDO("mysql:host=".$cleardb_server.";dbname=".$cleardb_db, $cleardb_username, $cleardb_password);
+        $this->pdo = new PDO("mysql:host=".$db_server.";dbname=".$db_db, $db_username, $db_password);
         // Throws an exception when error occurs
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

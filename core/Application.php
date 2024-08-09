@@ -48,15 +48,9 @@ class Application
         $this->router = new Router($this->request, $this->response); // Uses URL path to route to specific controller
 
         // Instantiates PDO connection to DB loading configuration
-        $this->db = new Database();
-
         // Get Spotify config details
-        $this->config = array(
-            "client_id" => getenv("spotify_client_id"),
-            "client_secret" => getenv("spotify_client_secret"),
-            "client_redirect" => getenv("spotify_client_redirect"),
-            "client_state" => getenv("spotify_state"),
-        );
+        $this->config = parse_ini_file('../private/config.ini');
+        $this->db = new Database();
 
         // Adds Spotify client token if needed, to connect to API
         $this->checkSpotifyToken();
@@ -190,6 +184,7 @@ class Application
         $spotify_client_id = getenv("spotify_client_id");
         $spotify_client_secret = getenv("spotify_client_secret");
         $curl = curl_init();
+        // var_dump($this);
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://accounts.spotify.com/api/token",
