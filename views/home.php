@@ -1,6 +1,6 @@
 <?php ?>
 
-<div class="row mt-0 pb-5">
+<div class="row mt-4 pb-5">
     <div class="col-12 px-1">
         <div class="text-center">
             <img src="/img/landing.png" class="img-fluid centred animate__animated animate__fadeInDown" id="dropdownimg"
@@ -8,7 +8,7 @@
             <h1 class="my-3 img-fluid centred animate__animated animate__fadeInDown" id="home">Ryeify</h1>
             <h4>A new way to discover and interact with Music.</h4>
             <h4 class="mt-2 mb-3">Check out our features!</h4>
-            <div id="scroll-button">
+            <div id="scroll-button" class="mt-4">
                 <i class="fas fa-arrow-circle-down fa-2x"></i>
             </div>
         </div>

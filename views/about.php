@@ -1,19 +1,16 @@
 <?php ?>
 
-<div class="row mt-0 pb-5">
+<div class="row mt-0">
     <div class="col-12 px-1">
         <div class="text-center">
             <h1 class="my-3 img-fluid centred animate__animated animate__fadeInDown" id="home">About Us</h1>
             <h4>Our inspirations, credits and other fun stuff!</h4>
             <h4 class="mt-2 mb-3">Check it out below</h4>
-            <div id="scroll-button">
-                <i class="fas fa-arrow-circle-down fa-2x"></i>
-            </div>
         </div>
     </div>
 </div>
 
-<div id="goto" class="row mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+<div id="goto" class="row" data-aos="fade-up" data-aos-duration="1000">
     <div class="col-md-10 col-lg-8 col-12 mx-auto">
         <div id="goto" class="card">
             <div class="card-body">
