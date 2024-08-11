@@ -1,5 +1,4 @@
 /private/config.ini
-*.ini
 .idea
 .DS_Store
 /test/db.php
