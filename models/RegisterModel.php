@@ -17,6 +17,10 @@ class RegisterModel extends DBModel
     public $password;
     public $confirmPassword;
 
+    public $id = null;
+    public $spotify_connected = false;
+    public $spotify_refresh_token = '';
+
     /**
      * Returns table name corresponding to registration within the DB
      * Fulfils abstract method defined in Model->tableName()
